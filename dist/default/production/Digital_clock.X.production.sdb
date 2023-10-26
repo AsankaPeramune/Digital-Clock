@@ -1,0 +1,388 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 6 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"46 E:\Embedded Systems\PIC\Programs with explanations\18. I2C\Digital_clock.X\D_Clock.c
+[v _main main `(v  1 e 1 0 ]
+"88
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+[v i1_lcd_init lcd_init `(v  1 e 1 0 ]
+"95
+[v _lcd_data lcd_data `(v  1 e 1 0 ]
+"104
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+[v i1_lcd_command lcd_command `(v  1 e 1 0 ]
+"113
+[v _lcd_string lcd_string `(v  1 e 1 0 ]
+"121
+[v _DS1307_write DS1307_write `(v  1 e 1 0 ]
+"188
+[v _DS1307_read DS1307_read `(v  1 e 1 0 ]
+"316
+[v _bcd_to_ascii bcd_to_ascii `(v  1 e 1 0 ]
+"331
+[v _bcd_to_decimal bcd_to_decimal `(uc  1 e 1 0 ]
+"342
+[v _decimal_to_bcd decimal_to_bcd `(uc  1 e 1 0 ]
+"354
+[v _set_timing set_timing `(v  1 e 1 0 ]
+"654
+[v _external external `II(v  1 e 1 0 ]
+[s S137 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"233 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[u S146 . 1 `S137 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES146  1 e 1 @6 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+[s S22 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"477
+[s S31 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
+[s S180 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"549
+[u S189 . 1 `S180 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES189  1 e 1 @12 ]
+"808
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"815
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S54 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+"1275
+[s S61 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+]
+[u S65 . 1 `S54 1 . 1 0 `S61 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES65  1 e 1 @129 ]
+[s S85 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1392
+[u S94 . 1 `S85 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES94  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+[s S158 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"1771
+[u S167 . 1 `S158 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES167  1 e 1 @145 ]
+"1823
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+[s S210 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"1884
+[s S219 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S224 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S230 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S235 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S240 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S245 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S250 . 1 `S210 1 . 1 0 `S219 1 . 1 0 `S224 1 . 1 0 `S230 1 . 1 0 `S235 1 . 1 0 `S240 1 . 1 0 `S245 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES250  1 e 1 @148 ]
+"2377
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"2632
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"2791
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"2806
+[v _SEN SEN `VEb  1 e 0 @1160 ]
+"2824
+[v _SSPIF SSPIF `VEb  1 e 0 @99 ]
+"42 E:\Embedded Systems\PIC\Programs with explanations\18. I2C\Digital_clock.X\D_Clock.c
+[v ___second __second `uc  1 e 1 0 ]
+[v ___minute __minute `uc  1 e 1 0 ]
+[v ___hour __hour `uc  1 e 1 0 ]
+[v ___day __day `uc  1 e 1 0 ]
+[v ___date __date `uc  1 e 1 0 ]
+[v ___month __month `uc  1 e 1 0 ]
+[v ___year __year `uc  1 e 1 0 ]
+[v ___con __con `uc  1 e 1 0 ]
+"43
+[v _timing_flag timing_flag `uc  1 e 1 0 ]
+"46
+[v _main main `(v  1 e 1 0 ]
+{
+"84
+} 0
+"354
+[v _set_timing set_timing `(v  1 e 1 0 ]
+{
+"366
+[v set_timing@decimal_val_year decimal_val_year `uc  1 a 1 37 ]
+"364
+[v set_timing@decimal_val_month decimal_val_month `uc  1 a 1 36 ]
+"362
+[v set_timing@decimal_val_date decimal_val_date `uc  1 a 1 35 ]
+"360
+[v set_timing@decimal_val_hour decimal_val_hour `uc  1 a 1 34 ]
+"358
+[v set_timing@decimal_val_minute decimal_val_minute `uc  1 a 1 33 ]
+"356
+[v set_timing@decimal_val_second decimal_val_second `uc  1 a 1 32 ]
+"367
+[v set_timing@bcd_val_year bcd_val_year `uc  1 a 1 31 ]
+"365
+[v set_timing@bcd_val_month bcd_val_month `uc  1 a 1 30 ]
+"363
+[v set_timing@bcd_val_date bcd_val_date `uc  1 a 1 29 ]
+"361
+[v set_timing@bcd_val_hour bcd_val_hour `uc  1 a 1 28 ]
+"359
+[v set_timing@bcd_val_minute bcd_val_minute `uc  1 a 1 27 ]
+"357
+[v set_timing@bcd_val_second bcd_val_second `uc  1 a 1 26 ]
+"653
+} 0
+"113
+[v _lcd_string lcd_string `(v  1 e 1 0 ]
+{
+[v lcd_string@str str `*.24DCuc  1 a 1 wreg ]
+"114
+[v lcd_string@i i `uc  1 a 1 3 ]
+"113
+[v lcd_string@str str `*.24DCuc  1 a 1 wreg ]
+[v lcd_string@num num `uc  1 p 1 1 ]
+"115
+[v lcd_string@str str `*.24DCuc  1 a 1 4 ]
+"119
+} 0
+"88
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"93
+} 0
+"331
+[v _bcd_to_decimal bcd_to_decimal `(uc  1 e 1 0 ]
+{
+[v bcd_to_decimal@value value `uc  1 a 1 wreg ]
+"333
+[v bcd_to_decimal@dec dec `uc  1 a 1 5 ]
+"331
+[v bcd_to_decimal@value value `uc  1 a 1 wreg ]
+"334
+[v bcd_to_decimal@value value `uc  1 a 1 4 ]
+"340
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 0 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 6 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 1 ]
+"51
+} 0
+"121 E:\Embedded Systems\PIC\Programs with explanations\18. I2C\Digital_clock.X\D_Clock.c
+[v _DS1307_write DS1307_write `(v  1 e 1 0 ]
+{
+[v DS1307_write@_second _second `uc  1 a 1 wreg ]
+[v DS1307_write@_second _second `uc  1 a 1 wreg ]
+[v DS1307_write@_minute _minute `uc  1 p 1 15 ]
+[v DS1307_write@_hour _hour `uc  1 p 1 16 ]
+[v DS1307_write@_day _day `uc  1 p 1 17 ]
+[v DS1307_write@_date _date `uc  1 p 1 18 ]
+[v DS1307_write@_month _month `uc  1 p 1 19 ]
+[v DS1307_write@_year _year `uc  1 p 1 20 ]
+"124
+[v DS1307_write@_second _second `uc  1 a 1 7 ]
+"186
+} 0
+"342
+[v _decimal_to_bcd decimal_to_bcd `(uc  1 e 1 0 ]
+{
+[v decimal_to_bcd@value value `uc  1 a 1 wreg ]
+"346
+[v decimal_to_bcd@hex hex `uc  1 a 1 13 ]
+"345
+[v decimal_to_bcd@lsb lsb `uc  1 a 1 12 ]
+"344
+[v decimal_to_bcd@msb msb `uc  1 a 1 11 ]
+"342
+[v decimal_to_bcd@value value `uc  1 a 1 wreg ]
+"348
+[v decimal_to_bcd@value value `uc  1 a 1 14 ]
+"352
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 0 ]
+[v ___awmod@dividend dividend `i  1 p 2 2 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 6 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 5 ]
+[v ___awdiv@counter counter `uc  1 a 1 4 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
+"188 E:\Embedded Systems\PIC\Programs with explanations\18. I2C\Digital_clock.X\D_Clock.c
+[v _DS1307_read DS1307_read `(v  1 e 1 0 ]
+{
+[v DS1307_read@slave_address slave_address `uc  1 a 1 wreg ]
+[v DS1307_read@slave_address slave_address `uc  1 a 1 wreg ]
+[v DS1307_read@register_address register_address `uc  1 p 1 5 ]
+"191
+[v DS1307_read@slave_address slave_address `uc  1 a 1 7 ]
+"314
+} 0
+"104
+[v _lcd_command lcd_command `(v  1 e 1 0 ]
+{
+[v lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v lcd_command@cmd cmd `uc  1 a 1 0 ]
+"111
+} 0
+"316
+[v _bcd_to_ascii bcd_to_ascii `(v  1 e 1 0 ]
+{
+[v bcd_to_ascii@value value `uc  1 a 1 wreg ]
+"318
+[v bcd_to_ascii@bcd bcd `uc  1 a 1 4 ]
+"316
+[v bcd_to_ascii@value value `uc  1 a 1 wreg ]
+"319
+[v bcd_to_ascii@value value `uc  1 a 1 3 ]
+"329
+} 0
+"95
+[v _lcd_data lcd_data `(v  1 e 1 0 ]
+{
+[v lcd_data@data data `uc  1 a 1 wreg ]
+[v lcd_data@data data `uc  1 a 1 wreg ]
+[v lcd_data@data data `uc  1 a 1 0 ]
+"102
+} 0
+"654
+[v _external external `II(v  1 e 1 0 ]
+{
+"665
+} 0
+"88
+[v i1_lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"93
+} 0
+"104
+[v i1_lcd_command lcd_command `(v  1 e 1 0 ]
+{
+[v i1lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v i1lcd_command@cmd cmd `uc  1 a 1 wreg ]
+[v i1lcd_command@cmd cmd `uc  1 a 1 2 ]
+"111
+} 0
