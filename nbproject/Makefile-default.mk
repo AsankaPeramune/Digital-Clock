@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=gnumdir -p
+MKDIR=gnumkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 

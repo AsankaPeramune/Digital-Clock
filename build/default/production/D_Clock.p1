@@ -1,60 +1,9 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[p mainexit ]
-"460 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
-[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S18 . RBIF INTF TMR0IF RBIE INTE TMR0IE PEIE GIE ]
-"470
-[s S19 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S19 . . T0IF . T0IE ]
-"459
-[u S17 `S18 1 `S19 1 ]
-[n S17 . . . ]
-"477
-[v _INTCONbits `VS17 ~T0 @X0 0 e@11 ]
-"1261
-[s S51 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S51 . PS PSA T0SE T0CS INTEDG nRBPU ]
-"1269
-[s S52 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S52 . PS0 PS1 PS2 ]
-"1260
-[u S50 `S51 1 `S52 1 ]
-[n S50 . . . ]
-"1275
-[v _OPTION_REGbits `VS50 ~T0 @X0 0 e@129 ]
-"1823
-[v _SSPADD `Vuc ~T0 @X0 0 e@147 ]
-"815
-[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
-"1437
-[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
-"1499
-[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
-"340
-[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"1381
-[s S56 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S56 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
-"1380
-[u S55 `S56 1 ]
-[n S55 . . ]
-"1392
-[v _TRISBbits `VS55 ~T0 @X0 0 e@134 ]
-"37 D_Clock.c
-[v _lcd_init `(v ~T0 @X0 0 ef ]
-"35
+"6 LCD.h
 [v _lcd_command `(v ~T0 @X0 0 ef1`uc ]
-"38
-[v _lcd_string `(v ~T0 @X0 0 ef2`*Cuc`uc ]
-[v F844 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF844 ~T0 @X0 0 e ]
-[p i __delay ]
-"32 D_Clock.c
-[v _DS1307_read `(v ~T0 @X0 0 ef2`uc`uc ]
-"39
-[v _set_timing `(v ~T0 @X0 0 ef ]
-"222 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+"340 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"222
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
 "221
@@ -62,7 +11,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S7 . . ]
 "233
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-"1760
+[v F844 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF844 ~T0 @X0 0 e ]
+[p i __delay ]
+"1760 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
 [s S71 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S71 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
 "1759
@@ -86,9 +39,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SSPIF `Vb ~T0 @X0 0 e@99 ]
 "2632
 [v _PEN `Vb ~T0 @X0 0 e@1162 ]
-"34 D_Clock.c
-[v _decimal_to_bcd `(uc ~T0 @X0 0 ef1`uc ]
-"2791 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f877a.h
+"2791
 [v _RSEN `Vb ~T0 @X0 0 e@1161 ]
 "1836
 [s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -118,8 +69,63 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _SSPSTATbits `VS72 ~T0 @X0 0 e@148 ]
 "2377
 [v _ACKEN `Vb ~T0 @X0 0 e@1164 ]
-"33 D_Clock.c
-[v _bcd_to_ascii `(v ~T0 @X0 0 ef1`uc ]
+[p mainexit ]
+"460
+[s S18 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S18 . RBIF INTF TMR0IF RBIE INTE TMR0IE PEIE GIE ]
+"470
+[s S19 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S19 . . T0IF . T0IE ]
+"459
+[u S17 `S18 1 `S19 1 ]
+[n S17 . . . ]
+"477
+[v _INTCONbits `VS17 ~T0 @X0 0 e@11 ]
+"1261
+[s S51 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S51 . PS PSA T0SE T0CS INTEDG nRBPU ]
+"1269
+[s S52 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S52 . PS0 PS1 PS2 ]
+"1260
+[u S50 `S51 1 `S52 1 ]
+[n S50 . . . ]
+"1275
+[v _OPTION_REGbits `VS50 ~T0 @X0 0 e@129 ]
+"1823
+[v _SSPADD `Vuc ~T0 @X0 0 e@147 ]
+"815
+[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
+"1437
+[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
+"1499
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"1381
+[s S56 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S56 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"1380
+[u S55 `S56 1 ]
+[n S55 . . ]
+"1392
+[v _TRISBbits `VS55 ~T0 @X0 0 e@134 ]
+"26 D_Clock.c
+[v _set_timing `(v ~T0 @X0 0 ef ]
+"3 D_Clock.c
+[p x FOSC=EXTRC ]
+"4
+[p x WDTE=OFF ]
+"5
+[p x PWRTE=OFF ]
+"6
+[p x BOREN=OFF ]
+"7
+[p x LVP=ON ]
+"8
+[p x CPD=OFF ]
+"9
+[p x WRT=OFF ]
+"10
+[p x CP=OFF ]
 [; ;xc.h: 18: extern const char __xc8_OPTIM_SPEED;
 [; ;xc.h: 20: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -1136,33 +1142,251 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 137: extern __bank0 unsigned char __resetbits;
 [; ;pic.h: 138: extern __bank0 __bit __powerdown;
 [; ;pic.h: 139: extern __bank0 __bit __timeout;
-"6 D_Clock.c
-[p x FOSC=EXTRC ]
-"7
-[p x WDTE=OFF ]
-"8
-[p x PWRTE=OFF ]
-"9
-[p x BOREN=OFF ]
-"10
-[p x LVP=ON ]
-"11
-[p x CPD=OFF ]
+[; ;LCD.h: 6: void lcd_command (unsigned char cmd) ;
+[; ;LCD.h: 7: void lcd_data (unsigned char data) ;
+[; ;LCD.h: 8: void lcd_init () ;
+[; ;LCD.h: 9: void lcd_string (const unsigned char *str, unsigned char num) ;
+"11 LCD.h
+[v _lcd_init `(v ~T0 @X0 1 ef ]
+{
+[; ;LCD.h: 11: void lcd_init(){
+[e :U _lcd_init ]
+[f ]
+[; ;LCD.h: 12: lcd_command (0x38);
 "12
-[p x WRT=OFF ]
+[e ( _lcd_command (1 -> -> 56 `i `uc ]
+[; ;LCD.h: 13: lcd_command (0x06);
 "13
-[p x CP=OFF ]
-[; ;D_Clock.c: 31: void DS1307_write (char _second, char _minute, char _hour, char _day, char _date, char _month, char _year) ;
-[; ;D_Clock.c: 32: void DS1307_read (char slave_address, char register_address);
-[; ;D_Clock.c: 33: void bcd_to_ascii (unsigned char value) ;
-[; ;D_Clock.c: 34: char decimal_to_bcd (unsigned char value) ;
-[; ;D_Clock.c: 35: void lcd_command (unsigned char cmd) ;
-[; ;D_Clock.c: 36: void lcd_data (unsigned char data) ;
-[; ;D_Clock.c: 37: void lcd_init () ;
-[; ;D_Clock.c: 38: void lcd_string (const unsigned char *str, unsigned char num) ;
-[; ;D_Clock.c: 39: void set_timing () ;
-[; ;D_Clock.c: 40: void interrupt external () ;
+[e ( _lcd_command (1 -> -> 6 `i `uc ]
+[; ;LCD.h: 14: lcd_command (0x0c);
+"14
+[e ( _lcd_command (1 -> -> 12 `i `uc ]
+[; ;LCD.h: 15: lcd_command (0x01);
+"15
+[e ( _lcd_command (1 -> -> 1 `i `uc ]
+[; ;LCD.h: 16: }
+"16
+[e :UE 95 ]
+}
+"18
+[v _lcd_data `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;LCD.h: 18: void lcd_data (unsigned char data){
+[e :U _lcd_data ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;LCD.h: 19: PORTD = data;
+"19
+[e = _PORTD _data ]
+[; ;LCD.h: 20: PORTBbits.RB1 = 1;
+"20
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;LCD.h: 21: PORTBbits.RB2 = 0;
+"21
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;LCD.h: 22: PORTBbits.RB3 =1;
+"22
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+[; ;LCD.h: 23: _delay((unsigned long)((5)*(20000000/4000.0)));
+"23
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;LCD.h: 24: PORTBbits.RB3 =0 ;
+"24
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[; ;LCD.h: 25: }
+"25
+[e :UE 96 ]
+}
+"27
+[v _lcd_command `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;LCD.h: 27: void lcd_command (unsigned char cmd){
+[e :U _lcd_command ]
+[v _cmd `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;LCD.h: 28: PORTD = cmd;
+"28
+[e = _PORTD _cmd ]
+[; ;LCD.h: 29: PORTBbits.RB1 = 0;
+"29
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;LCD.h: 30: PORTBbits.RB2 = 0;
+"30
+[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
+[; ;LCD.h: 31: PORTBbits.RB3 =1;
+"31
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+[; ;LCD.h: 32: _delay((unsigned long)((5)*(20000000/4000.0)));
+"32
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;LCD.h: 33: PORTBbits.RB3 =0 ;
+"33
+[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
+[; ;LCD.h: 34: }
+"34
+[e :UE 97 ]
+}
+"36
+[v _lcd_string `(v ~T0 @X0 1 ef2`*Cuc`uc ]
+{
+[; ;LCD.h: 36: void lcd_string (const unsigned char *str, unsigned char num) {
+[e :U _lcd_string ]
+[v _str `*Cuc ~T0 @X0 1 r1 ]
+[v _num `uc ~T0 @X0 1 r2 ]
+[f ]
+"37
+[v _i `uc ~T0 @X0 1 a ]
+[; ;LCD.h: 37: unsigned char i ;
+[; ;LCD.h: 38: for (i=0; i<num; i++)
+"38
+{
+[e = _i -> -> 0 `i `uc ]
+[e $U 102  ]
+"39
+[e :U 99 ]
+[; ;LCD.h: 39: {
+{
+[; ;LCD.h: 40: lcd_data(str[i]);
+"40
+[e ( _lcd_data (1 *U + _str * -> _i `ux -> -> # *U _str `ui `ux ]
+"41
+}
+"38
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 102 ]
+[e $ < -> _i `i -> _num `i 99  ]
+[e :U 100 ]
+"41
+}
+[; ;LCD.h: 41: }
+[; ;LCD.h: 42: }
 "42
+[e :UE 98 ]
+}
+[; ;Conversion.h: 1: void bcd_to_ascii (unsigned char value) ;
+[; ;Conversion.h: 2: char decimal_to_bcd (unsigned char value) ;
+[; ;Conversion.h: 3: char bcd_to_decimal (unsigned char value) ;
+"5 Conversion.h
+[v _bcd_to_ascii `(v ~T0 @X0 1 ef1`uc ]
+"6
+{
+[; ;Conversion.h: 5: void bcd_to_ascii (unsigned char value)
+[; ;Conversion.h: 6: {
+[e :U _bcd_to_ascii ]
+"5
+[v _value `uc ~T0 @X0 1 r1 ]
+"6
+[f ]
+"7
+[v _bcd `uc ~T0 @X0 1 a ]
+[; ;Conversion.h: 7: unsigned char bcd ;
+[; ;Conversion.h: 8: bcd = value ;
+"8
+[e = _bcd _value ]
+[; ;Conversion.h: 9: bcd = bcd & 0xf0 ;
+"9
+[e = _bcd -> & -> _bcd `i -> 240 `i `uc ]
+[; ;Conversion.h: 10: bcd = bcd >> 4 ;
+"10
+[e = _bcd -> >> -> _bcd `i -> 4 `i `uc ]
+[; ;Conversion.h: 11: bcd = bcd | 0x30 ;
+"11
+[e = _bcd -> | -> _bcd `i -> 48 `i `uc ]
+[; ;Conversion.h: 12: lcd_data (bcd) ;
+"12
+[e ( _lcd_data (1 _bcd ]
+[; ;Conversion.h: 14: bcd = value ;
+"14
+[e = _bcd _value ]
+[; ;Conversion.h: 15: bcd = bcd & 0x0f ;
+"15
+[e = _bcd -> & -> _bcd `i -> 15 `i `uc ]
+[; ;Conversion.h: 16: bcd = bcd | 0x30 ;
+"16
+[e = _bcd -> | -> _bcd `i -> 48 `i `uc ]
+[; ;Conversion.h: 17: lcd_data (bcd) ;
+"17
+[e ( _lcd_data (1 _bcd ]
+[; ;Conversion.h: 18: }
+"18
+[e :UE 103 ]
+}
+"20
+[v _bcd_to_decimal `(uc ~T0 @X0 1 ef1`uc ]
+"21
+{
+[; ;Conversion.h: 20: char bcd_to_decimal (unsigned char value)
+[; ;Conversion.h: 21: {
+[e :U _bcd_to_decimal ]
+"20
+[v _value `uc ~T0 @X0 1 r1 ]
+"21
+[f ]
+"22
+[v _dec `uc ~T0 @X0 1 a ]
+[; ;Conversion.h: 22: unsigned char dec ;
+[; ;Conversion.h: 23: dec = value ;
+"23
+[e = _dec _value ]
+[; ;Conversion.h: 24: dec = dec & 0xf0 ;
+"24
+[e = _dec -> & -> _dec `i -> 240 `i `uc ]
+[; ;Conversion.h: 25: dec = dec >> 4 ;
+"25
+[e = _dec -> >> -> _dec `i -> 4 `i `uc ]
+[; ;Conversion.h: 26: dec = dec * 10 ;
+"26
+[e = _dec -> * -> _dec `i -> 10 `i `uc ]
+[; ;Conversion.h: 27: dec = dec + (value & 0x0f) ;
+"27
+[e = _dec -> + -> _dec `i & -> _value `i -> 15 `i `uc ]
+[; ;Conversion.h: 28: return (dec) ;
+"28
+[e ) _dec ]
+[e $UE 104  ]
+[; ;Conversion.h: 29: }
+"29
+[e :UE 104 ]
+}
+"31
+[v _decimal_to_bcd `(uc ~T0 @X0 1 ef1`uc ]
+"32
+{
+[; ;Conversion.h: 31: char decimal_to_bcd (unsigned char value)
+[; ;Conversion.h: 32: {
+[e :U _decimal_to_bcd ]
+"31
+[v _value `uc ~T0 @X0 1 r1 ]
+"32
+[f ]
+"33
+[v _msb `uc ~T0 @X0 1 a ]
+"34
+[v _lsb `uc ~T0 @X0 1 a ]
+"35
+[v _hex `uc ~T0 @X0 1 a ]
+[; ;Conversion.h: 33: unsigned char msb ;
+[; ;Conversion.h: 34: unsigned char lsb ;
+[; ;Conversion.h: 35: unsigned char hex ;
+[; ;Conversion.h: 37: msb = value / 10 ;
+"37
+[e = _msb -> / -> _value `i -> 10 `i `uc ]
+[; ;Conversion.h: 38: lsb = value % 10 ;
+"38
+[e = _lsb -> % -> _value `i -> 10 `i `uc ]
+[; ;Conversion.h: 39: hex = ((msb<< 4) + lsb ) ;
+"39
+[e = _hex -> + << -> _msb `i -> 4 `i -> _lsb `i `uc ]
+[; ;Conversion.h: 40: return (hex) ;
+"40
+[e ) _hex ]
+[e $UE 105  ]
+[; ;Conversion.h: 41: }
+"41
+[e :UE 105 ]
+}
+[; ;DS1307_read.h: 11: void DS1307_read (char slave_address, char register_address);
+"13 DS1307_read.h
 [v ___second `uc ~T0 @X0 1 e ]
 [v ___minute `uc ~T0 @X0 1 e ]
 [v ___hour `uc ~T0 @X0 1 e ]
@@ -1171,248 +1395,420 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v ___month `uc ~T0 @X0 1 e ]
 [v ___year `uc ~T0 @X0 1 e ]
 [v ___con `uc ~T0 @X0 1 e ]
-[; ;D_Clock.c: 42: unsigned char __second, __minute, __hour, __day, __date, __month, __year, __con ;
-"43
-[v _timing_flag `uc ~T0 @X0 1 e ]
-[i _timing_flag
--> -> 0 `i `uc
-]
-[; ;D_Clock.c: 43: unsigned char timing_flag = 0;
-[v $root$_main `(v ~T0 @X0 0 e ]
-"46
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;DS1307_read.h: 13: unsigned char __second, __minute, __hour, __day, __date, __month, __year, __con ;
+"15
+[v _DS1307_read `(v ~T0 @X0 1 ef2`uc`uc ]
+"16
 {
-[; ;D_Clock.c: 46: void main() {
-[e :U _main ]
+[; ;DS1307_read.h: 15: void DS1307_read (char slave_address, char register_address)
+[; ;DS1307_read.h: 16: {
+[e :U _DS1307_read ]
+"15
+[v _slave_address `uc ~T0 @X0 1 r1 ]
+[v _register_address `uc ~T0 @X0 1 r2 ]
+"16
 [f ]
-[; ;D_Clock.c: 47: INTCONbits.GIE = 1;
-"47
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 48: INTCONbits.PEIE = 1;
-"48
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 49: INTCONbits.INTE = 1;
-"49
-[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 50: OPTION_REGbits.INTEDG =1;
-"50
-[e = . . _OPTION_REGbits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 52: SSPADD = 49 ;
-"52
-[e = _SSPADD -> -> 49 `i `uc ]
-[; ;D_Clock.c: 53: SSPCON = 0x28 ;
-"53
-[e = _SSPCON -> -> 40 `i `uc ]
-[; ;D_Clock.c: 55: TRISC = 0xff;
-"55
-[e = _TRISC -> -> 255 `i `uc ]
-[; ;D_Clock.c: 56: TRISD =0x00;
-"56
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;D_Clock.c: 57: PORTD = 0x00;
-"57
-[e = _PORTD -> -> 0 `i `uc ]
-[; ;D_Clock.c: 58: TRISBbits.TRISB0 =1;
-"58
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 59: TRISBbits.TRISB1 =0;
-"59
-[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 60: TRISBbits.TRISB2 =0;
-"60
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 61: TRISBbits.TRISB3 =0;
-"61
-[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 62: TRISBbits.TRISB4 =1;
-"62
-[e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 63: TRISBbits.TRISB5 =1;
-"63
-[e = . . _TRISBbits 0 5 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 64: TRISBbits.TRISB6 =1;
-"64
-[e = . . _TRISBbits 0 6 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 67: lcd_init();
-"67
-[e ( _lcd_init ..  ]
-[; ;D_Clock.c: 68: lcd_command (0x80);
-"68
-[e ( _lcd_command (1 -> -> 128 `i `uc ]
-[; ;D_Clock.c: 69: lcd_string ("CLOCK:",6);
-"69
-[e ( _lcd_string (2 , :s 1C -> -> 6 `i `uc ]
-[; ;D_Clock.c: 70: lcd_command (0xc0) ;
-"70
-[e ( _lcd_command (1 -> -> 192 `i `uc ]
-[; ;D_Clock.c: 71: lcd_string ("DATE:", 5) ;
-"71
-[e ( _lcd_string (2 , :s 2C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 72: _delay((unsigned long)((100)*(20000000/4000.0)));
-"72
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 74: while(1)
-"74
-[e :U 97 ]
-[; ;D_Clock.c: 75: {
-"75
-{
-[; ;D_Clock.c: 76: _delay((unsigned long)((20)*(20000000/4000.0)));
-"76
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 77: DS1307_read (0xd0, 0);
-"77
-[e ( _DS1307_read (2 , -> -> 208 `i `uc -> -> 0 `i `uc ]
-[; ;D_Clock.c: 78: if(timing_flag > 0 ) {
-"78
-[e $ ! > -> _timing_flag `i -> 0 `i 99  ]
-{
-[; ;D_Clock.c: 79: set_timing ();
-"79
-[e ( _set_timing ..  ]
-"80
-}
-[e :U 99 ]
-"81
-}
-[e :U 96 ]
-"74
-[e $U 97  ]
-[e :U 98 ]
-[; ;D_Clock.c: 80: }
-[; ;D_Clock.c: 81: }
-[; ;D_Clock.c: 83: return ;
-"83
-[e $UE 95  ]
-[; ;D_Clock.c: 84: }
-"84
-[e :UE 95 ]
-}
-"88
-[v _lcd_init `(v ~T0 @X0 1 ef ]
-{
-[; ;D_Clock.c: 88: void lcd_init(){
-[e :U _lcd_init ]
-[f ]
-[; ;D_Clock.c: 89: lcd_command (0x38);
-"89
-[e ( _lcd_command (1 -> -> 56 `i `uc ]
-[; ;D_Clock.c: 90: lcd_command (0x06);
-"90
-[e ( _lcd_command (1 -> -> 6 `i `uc ]
-[; ;D_Clock.c: 91: lcd_command (0x0c);
-"91
-[e ( _lcd_command (1 -> -> 12 `i `uc ]
-[; ;D_Clock.c: 92: lcd_command (0x01);
-"92
-[e ( _lcd_command (1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 93: }
-"93
-[e :UE 100 ]
-}
-"95
-[v _lcd_data `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;D_Clock.c: 95: void lcd_data (unsigned char data){
-[e :U _lcd_data ]
-[v _data `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;D_Clock.c: 96: PORTD = data;
-"96
-[e = _PORTD _data ]
-[; ;D_Clock.c: 97: PORTBbits.RB1 = 1;
-"97
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 98: PORTBbits.RB2 = 0;
-"98
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 99: PORTBbits.RB3 =1;
-"99
-[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 100: _delay((unsigned long)((5)*(20000000/4000.0)));
-"100
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 101: PORTBbits.RB3 =0 ;
-"101
-[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 102: }
-"102
-[e :UE 101 ]
-}
-"104
-[v _lcd_command `(v ~T0 @X0 1 ef1`uc ]
-{
-[; ;D_Clock.c: 104: void lcd_command (unsigned char cmd){
-[e :U _lcd_command ]
-[v _cmd `uc ~T0 @X0 1 r1 ]
-[f ]
-[; ;D_Clock.c: 105: PORTD = cmd;
-"105
-[e = _PORTD _cmd ]
-[; ;D_Clock.c: 106: PORTBbits.RB1 = 0;
-"106
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 107: PORTBbits.RB2 = 0;
-"107
-[e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 108: PORTBbits.RB3 =1;
-"108
-[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 109: _delay((unsigned long)((5)*(20000000/4000.0)));
-"109
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 110: PORTBbits.RB3 =0 ;
-"110
-[e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 111: }
-"111
-[e :UE 102 ]
-}
-"113
-[v _lcd_string `(v ~T0 @X0 1 ef2`*Cuc`uc ]
-{
-[; ;D_Clock.c: 113: void lcd_string (const unsigned char *str, unsigned char num) {
-[e :U _lcd_string ]
-[v _str `*Cuc ~T0 @X0 1 r1 ]
-[v _num `uc ~T0 @X0 1 r2 ]
-[f ]
-"114
-[v _i `uc ~T0 @X0 1 a ]
-[; ;D_Clock.c: 114: unsigned char i ;
-[; ;D_Clock.c: 115: for (i=0; i<num; i++)
-"115
-{
-[e = _i -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 18: SSPCON2bits.SEN = 1;
+"18
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 19: while (SEN);
+"19
 [e $U 107  ]
-"116
-[e :U 104 ]
-[; ;D_Clock.c: 116: {
-{
-[; ;D_Clock.c: 117: lcd_data(str[i]);
-"117
-[e ( _lcd_data (1 *U + _str * -> _i `ux -> -> # *U _str `ui `ux ]
-"118
-}
-"115
-[e ++ _i -> -> 1 `i `uc ]
+[e :U 108 ]
 [e :U 107 ]
-[e $ < -> _i `i -> _num `i 104  ]
-[e :U 105 ]
-"118
-}
-[; ;D_Clock.c: 118: }
-[; ;D_Clock.c: 119: }
-"119
-[e :UE 103 ]
-}
-"121
-[v _DS1307_write `(v ~T0 @X0 1 ef7`uc`uc`uc`uc`uc`uc`uc ]
-"122
+[e $ _SEN 108  ]
+[e :U 109 ]
+[; ;DS1307_read.h: 20: PIR1bits.SSPIF =0 ;
+"20
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 23: SSPBUF = slave_address ;
+"23
+[e = _SSPBUF _slave_address ]
+[; ;DS1307_read.h: 24: while (!SSPIF) ;
+"24
+[e $U 110  ]
+[e :U 111 ]
+[e :U 110 ]
+[e $ ! _SSPIF 111  ]
+[e :U 112 ]
+[; ;DS1307_read.h: 25: PIR1bits.SSPIF = 0 ;
+"25
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 26: if (SSPCON2bits.ACKSTAT)
+"26
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 113  ]
+[; ;DS1307_read.h: 27: {
+"27
 {
-[; ;D_Clock.c: 121: void DS1307_write (char _second, char _minute, char _hour, char _day, char _date, char _month, char _year)
-[; ;D_Clock.c: 122: {
-[e :U _DS1307_write ]
+[; ;DS1307_read.h: 28: SSPCON2bits.PEN = 1;
+"28
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 29: while (PEN);
+"29
+[e $U 114  ]
+[e :U 115 ]
+[e :U 114 ]
+[e $ _PEN 115  ]
+[e :U 116 ]
+[; ;DS1307_read.h: 30: return ;
+"30
+[e $UE 106  ]
+"31
+}
+[e :U 113 ]
+[; ;DS1307_read.h: 31: }
+[; ;DS1307_read.h: 34: SSPBUF = register_address ;
+"34
+[e = _SSPBUF _register_address ]
+[; ;DS1307_read.h: 35: while (!SSPIF) ;
+"35
+[e $U 117  ]
+[e :U 118 ]
+[e :U 117 ]
+[e $ ! _SSPIF 118  ]
+[e :U 119 ]
+[; ;DS1307_read.h: 36: PIR1bits.SSPIF = 0 ;
+"36
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 37: if (SSPCON2bits.ACKSTAT)
+"37
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 120  ]
+[; ;DS1307_read.h: 38: {
+"38
+{
+[; ;DS1307_read.h: 39: SSPCON2bits.PEN = 1;
+"39
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 40: while (PEN);
+"40
+[e $U 121  ]
+[e :U 122 ]
+[e :U 121 ]
+[e $ _PEN 122  ]
+[e :U 123 ]
+[; ;DS1307_read.h: 41: return ;
+"41
+[e $UE 106  ]
+"42
+}
+[e :U 120 ]
+[; ;DS1307_read.h: 42: }
+[; ;DS1307_read.h: 45: SSPCON2bits.RSEN = 1;
+"45
+[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 46: while (RSEN);
+"46
+[e $U 124  ]
+[e :U 125 ]
+[e :U 124 ]
+[e $ _RSEN 125  ]
+[e :U 126 ]
+[; ;DS1307_read.h: 47: PIR1bits.SSPIF =0 ;
+"47
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 50: SSPBUF = (slave_address + 1) ;
+"50
+[e = _SSPBUF -> + -> _slave_address `i -> 1 `i `uc ]
+[; ;DS1307_read.h: 51: while (!SSPIF) ;
+"51
+[e $U 127  ]
+[e :U 128 ]
+[e :U 127 ]
+[e $ ! _SSPIF 128  ]
+[e :U 129 ]
+[; ;DS1307_read.h: 52: PIR1bits.SSPIF = 0 ;
+"52
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 53: if (SSPCON2bits.ACKSTAT)
+"53
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 130  ]
+[; ;DS1307_read.h: 54: {
+"54
+{
+[; ;DS1307_read.h: 55: SSPCON2bits.PEN = 1;
+"55
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 56: while (PEN);
+"56
+[e $U 131  ]
+[e :U 132 ]
+[e :U 131 ]
+[e $ _PEN 132  ]
+[e :U 133 ]
+[; ;DS1307_read.h: 57: return ;
+"57
+[e $UE 106  ]
+"58
+}
+[e :U 130 ]
+[; ;DS1307_read.h: 58: }
+[; ;DS1307_read.h: 60: SSPCON2bits.RCEN = 1 ;
+"60
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 61: while (!SSPSTATbits.BF);
+"61
+[e $U 134  ]
+[e :U 135 ]
+[e :U 134 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 135  ]
+[e :U 136 ]
+[; ;DS1307_read.h: 62: __second = SSPBUF ;
+"62
+[e = ___second _SSPBUF ]
+[; ;DS1307_read.h: 64: SSPCON2bits.ACKDT = 0 ;
+"64
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 65: SSPCON2bits.ACKEN = 1 ;
+"65
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 66: while (ACKEN) ;
+"66
+[e $U 137  ]
+[e :U 138 ]
+[e :U 137 ]
+[e $ _ACKEN 138  ]
+[e :U 139 ]
+[; ;DS1307_read.h: 68: SSPCON2bits.RCEN = 1 ;
+"68
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 69: while (!SSPSTATbits.BF);
+"69
+[e $U 140  ]
+[e :U 141 ]
+[e :U 140 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 141  ]
+[e :U 142 ]
+[; ;DS1307_read.h: 70: __minute = SSPBUF ;
+"70
+[e = ___minute _SSPBUF ]
+[; ;DS1307_read.h: 72: SSPCON2bits.ACKDT = 0 ;
+"72
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 73: SSPCON2bits.ACKEN = 1 ;
+"73
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 74: while (ACKEN) ;
+"74
+[e $U 143  ]
+[e :U 144 ]
+[e :U 143 ]
+[e $ _ACKEN 144  ]
+[e :U 145 ]
+[; ;DS1307_read.h: 76: SSPCON2bits.RCEN = 1 ;
+"76
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 77: while (!SSPSTATbits.BF);
+"77
+[e $U 146  ]
+[e :U 147 ]
+[e :U 146 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 147  ]
+[e :U 148 ]
+[; ;DS1307_read.h: 78: __hour = SSPBUF ;
+"78
+[e = ___hour _SSPBUF ]
+[; ;DS1307_read.h: 80: SSPCON2bits.ACKDT = 0 ;
+"80
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 81: SSPCON2bits.ACKEN = 1 ;
+"81
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 82: while (ACKEN) ;
+"82
+[e $U 149  ]
+[e :U 150 ]
+[e :U 149 ]
+[e $ _ACKEN 150  ]
+[e :U 151 ]
+[; ;DS1307_read.h: 84: SSPCON2bits.RCEN = 1 ;
+"84
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 85: while (!SSPSTATbits.BF);
+"85
+[e $U 152  ]
+[e :U 153 ]
+[e :U 152 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 153  ]
+[e :U 154 ]
+[; ;DS1307_read.h: 86: __day = SSPBUF ;
+"86
+[e = ___day _SSPBUF ]
+[; ;DS1307_read.h: 88: SSPCON2bits.ACKDT = 0 ;
+"88
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 89: SSPCON2bits.ACKEN = 1 ;
+"89
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 90: while (ACKEN) ;
+"90
+[e $U 155  ]
+[e :U 156 ]
+[e :U 155 ]
+[e $ _ACKEN 156  ]
+[e :U 157 ]
+[; ;DS1307_read.h: 92: SSPCON2bits.RCEN = 1 ;
+"92
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 93: while (!SSPSTATbits.BF);
+"93
+[e $U 158  ]
+[e :U 159 ]
+[e :U 158 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 159  ]
+[e :U 160 ]
+[; ;DS1307_read.h: 94: __date = SSPBUF ;
+"94
+[e = ___date _SSPBUF ]
+[; ;DS1307_read.h: 96: SSPCON2bits.ACKDT = 0 ;
+"96
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 97: SSPCON2bits.ACKEN = 1 ;
+"97
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 98: while (ACKEN) ;
+"98
+[e $U 161  ]
+[e :U 162 ]
+[e :U 161 ]
+[e $ _ACKEN 162  ]
+[e :U 163 ]
+[; ;DS1307_read.h: 100: SSPCON2bits.RCEN = 1 ;
+"100
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 101: while (!SSPSTATbits.BF);
+"101
+[e $U 164  ]
+[e :U 165 ]
+[e :U 164 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 165  ]
+[e :U 166 ]
+[; ;DS1307_read.h: 102: __month = SSPBUF ;
+"102
+[e = ___month _SSPBUF ]
+[; ;DS1307_read.h: 104: SSPCON2bits.ACKDT = 0 ;
+"104
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 105: SSPCON2bits.ACKEN = 1 ;
+"105
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 106: while (ACKEN) ;
+"106
+[e $U 167  ]
+[e :U 168 ]
+[e :U 167 ]
+[e $ _ACKEN 168  ]
+[e :U 169 ]
+[; ;DS1307_read.h: 108: SSPCON2bits.RCEN = 1 ;
+"108
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 109: while (!SSPSTATbits.BF);
+"109
+[e $U 170  ]
+[e :U 171 ]
+[e :U 170 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 171  ]
+[e :U 172 ]
+[; ;DS1307_read.h: 110: __year = SSPBUF ;
+"110
+[e = ___year _SSPBUF ]
+[; ;DS1307_read.h: 112: SSPCON2bits.ACKDT = 0 ;
+"112
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[; ;DS1307_read.h: 113: SSPCON2bits.ACKEN = 1 ;
+"113
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 114: while (ACKEN) ;
+"114
+[e $U 173  ]
+[e :U 174 ]
+[e :U 173 ]
+[e $ _ACKEN 174  ]
+[e :U 175 ]
+[; ;DS1307_read.h: 116: SSPCON2bits.RCEN = 1 ;
+"116
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 117: while (!SSPSTATbits.BF);
+"117
+[e $U 176  ]
+[e :U 177 ]
+[e :U 176 ]
+[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 177  ]
+[e :U 178 ]
+[; ;DS1307_read.h: 118: __con = SSPBUF ;
+"118
+[e = ___con _SSPBUF ]
+[; ;DS1307_read.h: 120: SSPCON2bits.ACKDT = 1 ;
+"120
+[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 121: SSPCON2bits.ACKEN = 1 ;
 "121
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 122: while (ACKEN) ;
+"122
+[e $U 179  ]
+[e :U 180 ]
+[e :U 179 ]
+[e $ _ACKEN 180  ]
+[e :U 181 ]
+[; ;DS1307_read.h: 125: SSPCON2bits.PEN = 1 ;
+"125
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[; ;DS1307_read.h: 126: while (PEN);
+"126
+[e $U 182  ]
+[e :U 183 ]
+[e :U 182 ]
+[e $ _PEN 183  ]
+[e :U 184 ]
+[; ;DS1307_read.h: 128: lcd_command (0x88) ;
+"128
+[e ( _lcd_command (1 -> -> 136 `i `uc ]
+[; ;DS1307_read.h: 129: bcd_to_ascii (__hour) ;
+"129
+[e ( _bcd_to_ascii (1 ___hour ]
+[; ;DS1307_read.h: 130: lcd_data (':');
+"130
+[e ( _lcd_data (1 -> -> 58 `ui `uc ]
+[; ;DS1307_read.h: 131: bcd_to_ascii (__minute);
+"131
+[e ( _bcd_to_ascii (1 ___minute ]
+[; ;DS1307_read.h: 132: lcd_data (':');
+"132
+[e ( _lcd_data (1 -> -> 58 `ui `uc ]
+[; ;DS1307_read.h: 133: bcd_to_ascii (__second);
+"133
+[e ( _bcd_to_ascii (1 ___second ]
+[; ;DS1307_read.h: 135: lcd_command (0xc7) ;
+"135
+[e ( _lcd_command (1 -> -> 199 `i `uc ]
+[; ;DS1307_read.h: 136: bcd_to_ascii (__date) ;
+"136
+[e ( _bcd_to_ascii (1 ___date ]
+[; ;DS1307_read.h: 137: lcd_data ('/');
+"137
+[e ( _lcd_data (1 -> -> 47 `ui `uc ]
+[; ;DS1307_read.h: 138: bcd_to_ascii (__month);
+"138
+[e ( _bcd_to_ascii (1 ___month ]
+[; ;DS1307_read.h: 139: lcd_data ('/');
+"139
+[e ( _lcd_data (1 -> -> 47 `ui `uc ]
+[; ;DS1307_read.h: 140: bcd_to_ascii (__year);
+"140
+[e ( _bcd_to_ascii (1 ___year ]
+[; ;DS1307_read.h: 141: }
+"141
+[e :UE 106 ]
+}
+[; ;DS1307_write.h: 11: void DS1307_write (char _second, char _minute, char _hour, char _day, char _date, char _month, char _year) ;
+"13 DS1307_write.h
+[v _DS1307_write `(v ~T0 @X0 1 ef7`uc`uc`uc`uc`uc`uc`uc ]
+"14
+{
+[; ;DS1307_write.h: 13: void DS1307_write (char _second, char _minute, char _hour, char _day, char _date, char _month, char _year)
+[; ;DS1307_write.h: 14: {
+[e :U _DS1307_write ]
+"13
 [v __second `uc ~T0 @X0 1 r1 ]
 [v __minute `uc ~T0 @X0 1 r2 ]
 [v __hour `uc ~T0 @X0 1 r3 ]
@@ -1420,1724 +1816,1324 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v __date `uc ~T0 @X0 1 r5 ]
 [v __month `uc ~T0 @X0 1 r6 ]
 [v __year `uc ~T0 @X0 1 r7 ]
-"122
+"14
 [f ]
-[; ;D_Clock.c: 124: SSPCON2bits.SEN = 1;
-"124
+[; ;DS1307_write.h: 16: SSPCON2bits.SEN = 1;
+"16
 [e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 125: while (SEN);
-"125
-[e $U 109  ]
-[e :U 110 ]
-[e :U 109 ]
-[e $ _SEN 110  ]
-[e :U 111 ]
-[; ;D_Clock.c: 126: PIR1bits.SSPIF =0 ;
-"126
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 129: SSPBUF = 0xd0 ;
-"129
-[e = _SSPBUF -> -> 208 `i `uc ]
-[; ;D_Clock.c: 130: while (!SSPIF) ;
-"130
-[e $U 112  ]
-[e :U 113 ]
-[e :U 112 ]
-[e $ ! _SSPIF 113  ]
-[e :U 114 ]
-[; ;D_Clock.c: 131: PIR1bits.SSPIF = 0 ;
-"131
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 132: if (SSPCON2bits.ACKSTAT)
-"132
-[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 115  ]
-[; ;D_Clock.c: 133: {
-"133
-{
-[; ;D_Clock.c: 134: SSPCON2bits.PEN = 1;
-"134
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 135: while (PEN);
-"135
-[e $U 116  ]
-[e :U 117 ]
-[e :U 116 ]
-[e $ _PEN 117  ]
-[e :U 118 ]
-[; ;D_Clock.c: 136: return ;
-"136
-[e $UE 108  ]
-"137
-}
-[e :U 115 ]
-[; ;D_Clock.c: 137: }
-[; ;D_Clock.c: 140: SSPBUF = 0x00 ;
-"140
-[e = _SSPBUF -> -> 0 `i `uc ]
-[; ;D_Clock.c: 141: while (!SSPIF);
-"141
-[e $U 119  ]
-[e :U 120 ]
-[e :U 119 ]
-[e $ ! _SSPIF 120  ]
-[e :U 121 ]
-[; ;D_Clock.c: 142: PIR1bits.SSPIF = 0 ;
-"142
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 143: if (SSPCON2bits.ACKSTAT)
-"143
-[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 122  ]
-[; ;D_Clock.c: 144: {
-"144
-{
-[; ;D_Clock.c: 145: SSPCON2bits.PEN = 1;
-"145
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 146: while (PEN);
-"146
-[e $U 123  ]
-[e :U 124 ]
-[e :U 123 ]
-[e $ _PEN 124  ]
-[e :U 125 ]
-[; ;D_Clock.c: 147: return ;
-"147
-[e $UE 108  ]
-"148
-}
-[e :U 122 ]
-[; ;D_Clock.c: 148: }
-[; ;D_Clock.c: 150: SSPBUF = decimal_to_bcd (_second) ;
-"150
-[e = _SSPBUF ( _decimal_to_bcd (1 __second ]
-[; ;D_Clock.c: 151: while(!SSPIF);
-"151
-[e $U 126  ]
-[e :U 127 ]
-[e :U 126 ]
-[e $ ! _SSPIF 127  ]
-[e :U 128 ]
-[; ;D_Clock.c: 152: PIR1bits.SSPIF = 0 ;
-"152
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 154: SSPBUF = decimal_to_bcd (_minute) ;
-"154
-[e = _SSPBUF ( _decimal_to_bcd (1 __minute ]
-[; ;D_Clock.c: 155: while(!SSPIF);
-"155
-[e $U 129  ]
-[e :U 130 ]
-[e :U 129 ]
-[e $ ! _SSPIF 130  ]
-[e :U 131 ]
-[; ;D_Clock.c: 156: PIR1bits.SSPIF = 0 ;
-"156
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 158: SSPBUF = decimal_to_bcd (_hour) ;
-"158
-[e = _SSPBUF ( _decimal_to_bcd (1 __hour ]
-[; ;D_Clock.c: 159: while(!SSPIF);
-"159
-[e $U 132  ]
-[e :U 133 ]
-[e :U 132 ]
-[e $ ! _SSPIF 133  ]
-[e :U 134 ]
-[; ;D_Clock.c: 160: PIR1bits.SSPIF = 0 ;
-"160
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 162: SSPBUF = decimal_to_bcd (_day) ;
-"162
-[e = _SSPBUF ( _decimal_to_bcd (1 __day ]
-[; ;D_Clock.c: 163: while(!SSPIF);
-"163
-[e $U 135  ]
-[e :U 136 ]
-[e :U 135 ]
-[e $ ! _SSPIF 136  ]
-[e :U 137 ]
-[; ;D_Clock.c: 164: PIR1bits.SSPIF = 0 ;
-"164
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 166: SSPBUF = decimal_to_bcd (_date) ;
-"166
-[e = _SSPBUF ( _decimal_to_bcd (1 __date ]
-[; ;D_Clock.c: 167: while(!SSPIF);
-"167
-[e $U 138  ]
-[e :U 139 ]
-[e :U 138 ]
-[e $ ! _SSPIF 139  ]
-[e :U 140 ]
-[; ;D_Clock.c: 168: PIR1bits.SSPIF = 0 ;
-"168
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 170: SSPBUF = decimal_to_bcd (_month) ;
-"170
-[e = _SSPBUF ( _decimal_to_bcd (1 __month ]
-[; ;D_Clock.c: 171: while(!SSPIF);
-"171
-[e $U 141  ]
-[e :U 142 ]
-[e :U 141 ]
-[e $ ! _SSPIF 142  ]
-[e :U 143 ]
-[; ;D_Clock.c: 172: PIR1bits.SSPIF = 0 ;
-"172
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 174: SSPBUF = decimal_to_bcd (_year) ;
-"174
-[e = _SSPBUF ( _decimal_to_bcd (1 __year ]
-[; ;D_Clock.c: 175: while(!SSPIF);
-"175
-[e $U 144  ]
-[e :U 145 ]
-[e :U 144 ]
-[e $ ! _SSPIF 145  ]
-[e :U 146 ]
-[; ;D_Clock.c: 176: PIR1bits.SSPIF = 0 ;
-"176
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 178: SSPBUF = 0x00 ;
-"178
-[e = _SSPBUF -> -> 0 `i `uc ]
-[; ;D_Clock.c: 179: while(!SSPIF);
-"179
-[e $U 147  ]
-[e :U 148 ]
-[e :U 147 ]
-[e $ ! _SSPIF 148  ]
-[e :U 149 ]
-[; ;D_Clock.c: 180: PIR1bits.SSPIF = 0 ;
-"180
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 183: SSPCON2bits.PEN = 1 ;
-"183
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 184: while(PEN) ;
-"184
-[e $U 150  ]
-[e :U 151 ]
-[e :U 150 ]
-[e $ _PEN 151  ]
-[e :U 152 ]
-[; ;D_Clock.c: 185: PIR1bits.SSPIF = 0 ;
-"185
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 186: }
-"186
-[e :UE 108 ]
-}
-"188
-[v _DS1307_read `(v ~T0 @X0 1 ef2`uc`uc ]
-"189
-{
-[; ;D_Clock.c: 188: void DS1307_read (char slave_address, char register_address)
-[; ;D_Clock.c: 189: {
-[e :U _DS1307_read ]
-"188
-[v _slave_address `uc ~T0 @X0 1 r1 ]
-[v _register_address `uc ~T0 @X0 1 r2 ]
-"189
-[f ]
-[; ;D_Clock.c: 191: SSPCON2bits.SEN = 1;
-"191
-[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 192: while (SEN);
-"192
-[e $U 154  ]
-[e :U 155 ]
-[e :U 154 ]
-[e $ _SEN 155  ]
-[e :U 156 ]
-[; ;D_Clock.c: 193: PIR1bits.SSPIF =0 ;
-"193
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 196: SSPBUF = slave_address ;
-"196
-[e = _SSPBUF _slave_address ]
-[; ;D_Clock.c: 197: while (!SSPIF) ;
-"197
-[e $U 157  ]
-[e :U 158 ]
-[e :U 157 ]
-[e $ ! _SSPIF 158  ]
-[e :U 159 ]
-[; ;D_Clock.c: 198: PIR1bits.SSPIF = 0 ;
-"198
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 199: if (SSPCON2bits.ACKSTAT)
-"199
-[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 160  ]
-[; ;D_Clock.c: 200: {
-"200
-{
-[; ;D_Clock.c: 201: SSPCON2bits.PEN = 1;
-"201
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 202: while (PEN);
-"202
-[e $U 161  ]
-[e :U 162 ]
-[e :U 161 ]
-[e $ _PEN 162  ]
-[e :U 163 ]
-[; ;D_Clock.c: 203: return ;
-"203
-[e $UE 153  ]
-"204
-}
-[e :U 160 ]
-[; ;D_Clock.c: 204: }
-[; ;D_Clock.c: 207: SSPBUF = register_address ;
-"207
-[e = _SSPBUF _register_address ]
-[; ;D_Clock.c: 208: while (!SSPIF) ;
-"208
-[e $U 164  ]
-[e :U 165 ]
-[e :U 164 ]
-[e $ ! _SSPIF 165  ]
-[e :U 166 ]
-[; ;D_Clock.c: 209: PIR1bits.SSPIF = 0 ;
-"209
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 210: if (SSPCON2bits.ACKSTAT)
-"210
-[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 167  ]
-[; ;D_Clock.c: 211: {
-"211
-{
-[; ;D_Clock.c: 212: SSPCON2bits.PEN = 1;
-"212
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 213: while (PEN);
-"213
-[e $U 168  ]
-[e :U 169 ]
-[e :U 168 ]
-[e $ _PEN 169  ]
-[e :U 170 ]
-[; ;D_Clock.c: 214: return ;
-"214
-[e $UE 153  ]
-"215
-}
-[e :U 167 ]
-[; ;D_Clock.c: 215: }
-[; ;D_Clock.c: 218: SSPCON2bits.RSEN = 1;
-"218
-[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 219: while (RSEN);
-"219
-[e $U 171  ]
-[e :U 172 ]
-[e :U 171 ]
-[e $ _RSEN 172  ]
-[e :U 173 ]
-[; ;D_Clock.c: 220: PIR1bits.SSPIF =0 ;
-"220
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 223: SSPBUF = (slave_address + 1) ;
-"223
-[e = _SSPBUF -> + -> _slave_address `i -> 1 `i `uc ]
-[; ;D_Clock.c: 224: while (!SSPIF) ;
-"224
-[e $U 174  ]
-[e :U 175 ]
-[e :U 174 ]
-[e $ ! _SSPIF 175  ]
-[e :U 176 ]
-[; ;D_Clock.c: 225: PIR1bits.SSPIF = 0 ;
-"225
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 226: if (SSPCON2bits.ACKSTAT)
-"226
-[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 177  ]
-[; ;D_Clock.c: 227: {
-"227
-{
-[; ;D_Clock.c: 228: SSPCON2bits.PEN = 1;
-"228
-[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 229: while (PEN);
-"229
-[e $U 178  ]
-[e :U 179 ]
-[e :U 178 ]
-[e $ _PEN 179  ]
-[e :U 180 ]
-[; ;D_Clock.c: 230: return ;
-"230
-[e $UE 153  ]
-"231
-}
-[e :U 177 ]
-[; ;D_Clock.c: 231: }
-[; ;D_Clock.c: 233: SSPCON2bits.RCEN = 1 ;
-"233
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 234: while (!SSPSTATbits.BF);
-"234
-[e $U 181  ]
-[e :U 182 ]
-[e :U 181 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 182  ]
-[e :U 183 ]
-[; ;D_Clock.c: 235: __second = SSPBUF ;
-"235
-[e = ___second _SSPBUF ]
-[; ;D_Clock.c: 237: SSPCON2bits.ACKDT = 0 ;
-"237
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 238: SSPCON2bits.ACKEN = 1 ;
-"238
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 239: while (ACKEN) ;
-"239
-[e $U 184  ]
-[e :U 185 ]
-[e :U 184 ]
-[e $ _ACKEN 185  ]
-[e :U 186 ]
-[; ;D_Clock.c: 241: SSPCON2bits.RCEN = 1 ;
-"241
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 242: while (!SSPSTATbits.BF);
-"242
-[e $U 187  ]
-[e :U 188 ]
+[; ;DS1307_write.h: 17: while (SEN);
+"17
+[e $U 186  ]
 [e :U 187 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 188  ]
-[e :U 189 ]
-[; ;D_Clock.c: 243: __minute = SSPBUF ;
-"243
-[e = ___minute _SSPBUF ]
-[; ;D_Clock.c: 245: SSPCON2bits.ACKDT = 0 ;
-"245
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 246: SSPCON2bits.ACKEN = 1 ;
-"246
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 247: while (ACKEN) ;
-"247
-[e $U 190  ]
-[e :U 191 ]
+[e :U 186 ]
+[e $ _SEN 187  ]
+[e :U 188 ]
+[; ;DS1307_write.h: 18: PIR1bits.SSPIF =0 ;
+"18
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 21: SSPBUF = 0xd0 ;
+"21
+[e = _SSPBUF -> -> 208 `i `uc ]
+[; ;DS1307_write.h: 22: while (!SSPIF) ;
+"22
+[e $U 189  ]
 [e :U 190 ]
-[e $ _ACKEN 191  ]
-[e :U 192 ]
-[; ;D_Clock.c: 249: SSPCON2bits.RCEN = 1 ;
-"249
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 250: while (!SSPSTATbits.BF);
-"250
+[e :U 189 ]
+[e $ ! _SSPIF 190  ]
+[e :U 191 ]
+[; ;DS1307_write.h: 23: PIR1bits.SSPIF = 0 ;
+"23
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 24: if (SSPCON2bits.ACKSTAT)
+"24
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 192  ]
+[; ;DS1307_write.h: 25: {
+"25
+{
+[; ;DS1307_write.h: 26: SSPCON2bits.PEN = 1;
+"26
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[; ;DS1307_write.h: 27: while (PEN);
+"27
 [e $U 193  ]
 [e :U 194 ]
 [e :U 193 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 194  ]
+[e $ _PEN 194  ]
 [e :U 195 ]
-[; ;D_Clock.c: 251: __hour = SSPBUF ;
-"251
-[e = ___hour _SSPBUF ]
-[; ;D_Clock.c: 253: SSPCON2bits.ACKDT = 0 ;
-"253
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 254: SSPCON2bits.ACKEN = 1 ;
-"254
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 255: while (ACKEN) ;
-"255
+[; ;DS1307_write.h: 28: return ;
+"28
+[e $UE 185  ]
+"29
+}
+[e :U 192 ]
+[; ;DS1307_write.h: 29: }
+[; ;DS1307_write.h: 32: SSPBUF = 0x00 ;
+"32
+[e = _SSPBUF -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 33: while (!SSPIF);
+"33
 [e $U 196  ]
 [e :U 197 ]
 [e :U 196 ]
-[e $ _ACKEN 197  ]
+[e $ ! _SSPIF 197  ]
 [e :U 198 ]
-[; ;D_Clock.c: 257: SSPCON2bits.RCEN = 1 ;
-"257
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 258: while (!SSPSTATbits.BF);
-"258
-[e $U 199  ]
-[e :U 200 ]
-[e :U 199 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 200  ]
-[e :U 201 ]
-[; ;D_Clock.c: 259: __day = SSPBUF ;
-"259
-[e = ___day _SSPBUF ]
-[; ;D_Clock.c: 261: SSPCON2bits.ACKDT = 0 ;
-"261
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 262: SSPCON2bits.ACKEN = 1 ;
-"262
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 263: while (ACKEN) ;
-"263
-[e $U 202  ]
-[e :U 203 ]
-[e :U 202 ]
-[e $ _ACKEN 203  ]
-[e :U 204 ]
-[; ;D_Clock.c: 265: SSPCON2bits.RCEN = 1 ;
-"265
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 266: while (!SSPSTATbits.BF);
-"266
-[e $U 205  ]
-[e :U 206 ]
-[e :U 205 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 206  ]
-[e :U 207 ]
-[; ;D_Clock.c: 267: __date = SSPBUF ;
-"267
-[e = ___date _SSPBUF ]
-[; ;D_Clock.c: 269: SSPCON2bits.ACKDT = 0 ;
-"269
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 270: SSPCON2bits.ACKEN = 1 ;
-"270
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 271: while (ACKEN) ;
-"271
-[e $U 208  ]
-[e :U 209 ]
-[e :U 208 ]
-[e $ _ACKEN 209  ]
-[e :U 210 ]
-[; ;D_Clock.c: 273: SSPCON2bits.RCEN = 1 ;
-"273
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 274: while (!SSPSTATbits.BF);
-"274
-[e $U 211  ]
-[e :U 212 ]
-[e :U 211 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 212  ]
-[e :U 213 ]
-[; ;D_Clock.c: 275: __month = SSPBUF ;
-"275
-[e = ___month _SSPBUF ]
-[; ;D_Clock.c: 277: SSPCON2bits.ACKDT = 0 ;
-"277
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 278: SSPCON2bits.ACKEN = 1 ;
-"278
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 279: while (ACKEN) ;
-"279
-[e $U 214  ]
-[e :U 215 ]
-[e :U 214 ]
-[e $ _ACKEN 215  ]
-[e :U 216 ]
-[; ;D_Clock.c: 281: SSPCON2bits.RCEN = 1 ;
-"281
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 282: while (!SSPSTATbits.BF);
-"282
-[e $U 217  ]
-[e :U 218 ]
-[e :U 217 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 218  ]
-[e :U 219 ]
-[; ;D_Clock.c: 283: __year = SSPBUF ;
-"283
-[e = ___year _SSPBUF ]
-[; ;D_Clock.c: 285: SSPCON2bits.ACKDT = 0 ;
-"285
-[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 286: SSPCON2bits.ACKEN = 1 ;
-"286
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 287: while (ACKEN) ;
-"287
-[e $U 220  ]
-[e :U 221 ]
-[e :U 220 ]
-[e $ _ACKEN 221  ]
-[e :U 222 ]
-[; ;D_Clock.c: 289: SSPCON2bits.RCEN = 1 ;
-"289
-[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 290: while (!SSPSTATbits.BF);
-"290
-[e $U 223  ]
-[e :U 224 ]
-[e :U 223 ]
-[e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 224  ]
-[e :U 225 ]
-[; ;D_Clock.c: 291: __con = SSPBUF ;
-"291
-[e = ___con _SSPBUF ]
-[; ;D_Clock.c: 293: SSPCON2bits.ACKDT = 1 ;
-"293
-[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 294: SSPCON2bits.ACKEN = 1 ;
-"294
-[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 295: while (ACKEN) ;
-"295
-[e $U 226  ]
-[e :U 227 ]
-[e :U 226 ]
-[e $ _ACKEN 227  ]
-[e :U 228 ]
-[; ;D_Clock.c: 298: SSPCON2bits.PEN = 1 ;
-"298
+[; ;DS1307_write.h: 34: PIR1bits.SSPIF = 0 ;
+"34
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 35: if (SSPCON2bits.ACKSTAT)
+"35
+[e $ ! != -> . . _SSPCON2bits 0 6 `i -> -> -> 0 `i `Vuc `i 199  ]
+[; ;DS1307_write.h: 36: {
+"36
+{
+[; ;DS1307_write.h: 37: SSPCON2bits.PEN = 1;
+"37
 [e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 299: while (PEN);
-"299
-[e $U 229  ]
-[e :U 230 ]
+[; ;DS1307_write.h: 38: while (PEN);
+"38
+[e $U 200  ]
+[e :U 201 ]
+[e :U 200 ]
+[e $ _PEN 201  ]
+[e :U 202 ]
+[; ;DS1307_write.h: 39: return ;
+"39
+[e $UE 185  ]
+"40
+}
+[e :U 199 ]
+[; ;DS1307_write.h: 40: }
+[; ;DS1307_write.h: 42: SSPBUF = decimal_to_bcd (_second) ;
+"42
+[e = _SSPBUF ( _decimal_to_bcd (1 __second ]
+[; ;DS1307_write.h: 43: while(!SSPIF);
+"43
+[e $U 203  ]
+[e :U 204 ]
+[e :U 203 ]
+[e $ ! _SSPIF 204  ]
+[e :U 205 ]
+[; ;DS1307_write.h: 44: PIR1bits.SSPIF = 0 ;
+"44
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 46: SSPBUF = decimal_to_bcd (_minute) ;
+"46
+[e = _SSPBUF ( _decimal_to_bcd (1 __minute ]
+[; ;DS1307_write.h: 47: while(!SSPIF);
+"47
+[e $U 206  ]
+[e :U 207 ]
+[e :U 206 ]
+[e $ ! _SSPIF 207  ]
+[e :U 208 ]
+[; ;DS1307_write.h: 48: PIR1bits.SSPIF = 0 ;
+"48
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 50: SSPBUF = decimal_to_bcd (_hour) ;
+"50
+[e = _SSPBUF ( _decimal_to_bcd (1 __hour ]
+[; ;DS1307_write.h: 51: while(!SSPIF);
+"51
+[e $U 209  ]
+[e :U 210 ]
+[e :U 209 ]
+[e $ ! _SSPIF 210  ]
+[e :U 211 ]
+[; ;DS1307_write.h: 52: PIR1bits.SSPIF = 0 ;
+"52
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 54: SSPBUF = decimal_to_bcd (_day) ;
+"54
+[e = _SSPBUF ( _decimal_to_bcd (1 __day ]
+[; ;DS1307_write.h: 55: while(!SSPIF);
+"55
+[e $U 212  ]
+[e :U 213 ]
+[e :U 212 ]
+[e $ ! _SSPIF 213  ]
+[e :U 214 ]
+[; ;DS1307_write.h: 56: PIR1bits.SSPIF = 0 ;
+"56
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 58: SSPBUF = decimal_to_bcd (_date) ;
+"58
+[e = _SSPBUF ( _decimal_to_bcd (1 __date ]
+[; ;DS1307_write.h: 59: while(!SSPIF);
+"59
+[e $U 215  ]
+[e :U 216 ]
+[e :U 215 ]
+[e $ ! _SSPIF 216  ]
+[e :U 217 ]
+[; ;DS1307_write.h: 60: PIR1bits.SSPIF = 0 ;
+"60
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 62: SSPBUF = decimal_to_bcd (_month) ;
+"62
+[e = _SSPBUF ( _decimal_to_bcd (1 __month ]
+[; ;DS1307_write.h: 63: while(!SSPIF);
+"63
+[e $U 218  ]
+[e :U 219 ]
+[e :U 218 ]
+[e $ ! _SSPIF 219  ]
+[e :U 220 ]
+[; ;DS1307_write.h: 64: PIR1bits.SSPIF = 0 ;
+"64
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 66: SSPBUF = decimal_to_bcd (_year) ;
+"66
+[e = _SSPBUF ( _decimal_to_bcd (1 __year ]
+[; ;DS1307_write.h: 67: while(!SSPIF);
+"67
+[e $U 221  ]
+[e :U 222 ]
+[e :U 221 ]
+[e $ ! _SSPIF 222  ]
+[e :U 223 ]
+[; ;DS1307_write.h: 68: PIR1bits.SSPIF = 0 ;
+"68
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 70: SSPBUF = 0x00 ;
+"70
+[e = _SSPBUF -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 71: while(!SSPIF);
+"71
+[e $U 224  ]
+[e :U 225 ]
+[e :U 224 ]
+[e $ ! _SSPIF 225  ]
+[e :U 226 ]
+[; ;DS1307_write.h: 72: PIR1bits.SSPIF = 0 ;
+"72
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 75: SSPCON2bits.PEN = 1 ;
+"75
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[; ;DS1307_write.h: 76: while(PEN) ;
+"76
+[e $U 227  ]
+[e :U 228 ]
+[e :U 227 ]
+[e $ _PEN 228  ]
 [e :U 229 ]
-[e $ _PEN 230  ]
+[; ;DS1307_write.h: 77: PIR1bits.SSPIF = 0 ;
+"77
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;DS1307_write.h: 78: }
+"78
+[e :UE 185 ]
+}
+[; ;D_Clock.c: 26: void set_timing () ;
+[; ;D_Clock.c: 27: void interrupt external () ;
+[; ;D_Clock.c: 29: unsigned char __second, __minute, __hour, __day, __date, __month, __year, __con ;
+"30 D_Clock.c
+[v _timing_flag `uc ~T0 @X0 1 e ]
+[i _timing_flag
+-> -> 0 `i `uc
+]
+[; ;D_Clock.c: 30: unsigned char timing_flag = 0;
+[v $root$_main `(v ~T0 @X0 0 e ]
+"33
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[; ;D_Clock.c: 33: void main() {
+[e :U _main ]
+[f ]
+[; ;D_Clock.c: 34: INTCONbits.GIE = 1;
+"34
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 35: INTCONbits.PEIE = 1;
+"35
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 36: INTCONbits.INTE = 1;
+"36
+[e = . . _INTCONbits 0 4 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 37: OPTION_REGbits.INTEDG =1;
+"37
+[e = . . _OPTION_REGbits 0 4 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 39: SSPADD = 49 ;
+"39
+[e = _SSPADD -> -> 49 `i `uc ]
+[; ;D_Clock.c: 40: SSPCON = 0x28 ;
+"40
+[e = _SSPCON -> -> 40 `i `uc ]
+[; ;D_Clock.c: 42: TRISC = 0xff;
+"42
+[e = _TRISC -> -> 255 `i `uc ]
+[; ;D_Clock.c: 43: TRISD =0x00;
+"43
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;D_Clock.c: 44: PORTD = 0x00;
+"44
+[e = _PORTD -> -> 0 `i `uc ]
+[; ;D_Clock.c: 45: TRISBbits.TRISB0 =1;
+"45
+[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 46: TRISBbits.TRISB1 =0;
+"46
+[e = . . _TRISBbits 0 1 -> -> 0 `i `uc ]
+[; ;D_Clock.c: 47: TRISBbits.TRISB2 =0;
+"47
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;D_Clock.c: 48: TRISBbits.TRISB3 =0;
+"48
+[e = . . _TRISBbits 0 3 -> -> 0 `i `uc ]
+[; ;D_Clock.c: 49: TRISBbits.TRISB4 =1;
+"49
+[e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 50: TRISBbits.TRISB5 =1;
+"50
+[e = . . _TRISBbits 0 5 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 51: TRISBbits.TRISB6 =1;
+"51
+[e = . . _TRISBbits 0 6 -> -> 1 `i `uc ]
+[; ;D_Clock.c: 54: lcd_init();
+"54
+[e ( _lcd_init ..  ]
+[; ;D_Clock.c: 55: lcd_command (0x80);
+"55
+[e ( _lcd_command (1 -> -> 128 `i `uc ]
+[; ;D_Clock.c: 56: lcd_string ("CLOCK:",6);
+"56
+[e ( _lcd_string (2 , :s 1C -> -> 6 `i `uc ]
+[; ;D_Clock.c: 57: lcd_command (0xc0) ;
+"57
+[e ( _lcd_command (1 -> -> 192 `i `uc ]
+[; ;D_Clock.c: 58: lcd_string ("DATE:", 5) ;
+"58
+[e ( _lcd_string (2 , :s 2C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 59: _delay((unsigned long)((100)*(20000000/4000.0)));
+"59
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 61: while(1)
+"61
+[e :U 232 ]
+[; ;D_Clock.c: 62: {
+"62
+{
+[; ;D_Clock.c: 63: _delay((unsigned long)((20)*(20000000/4000.0)));
+"63
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 64: DS1307_read (0xd0, 0);
+"64
+[e ( _DS1307_read (2 , -> -> 208 `i `uc -> -> 0 `i `uc ]
+[; ;D_Clock.c: 65: if(timing_flag > 0 ) {
+"65
+[e $ ! > -> _timing_flag `i -> 0 `i 234  ]
+{
+[; ;D_Clock.c: 66: set_timing ();
+"66
+[e ( _set_timing ..  ]
+"67
+}
+[e :U 234 ]
+"68
+}
 [e :U 231 ]
-[; ;D_Clock.c: 301: lcd_command (0x88) ;
-"301
-[e ( _lcd_command (1 -> -> 136 `i `uc ]
-[; ;D_Clock.c: 302: bcd_to_ascii (__hour) ;
-"302
-[e ( _bcd_to_ascii (1 ___hour ]
-[; ;D_Clock.c: 303: lcd_data (':');
-"303
-[e ( _lcd_data (1 -> -> 58 `ui `uc ]
-[; ;D_Clock.c: 304: bcd_to_ascii (__minute);
-"304
-[e ( _bcd_to_ascii (1 ___minute ]
-[; ;D_Clock.c: 305: lcd_data (':');
-"305
-[e ( _lcd_data (1 -> -> 58 `ui `uc ]
-[; ;D_Clock.c: 306: bcd_to_ascii (__second);
-"306
-[e ( _bcd_to_ascii (1 ___second ]
-[; ;D_Clock.c: 308: lcd_command (0xc7) ;
-"308
-[e ( _lcd_command (1 -> -> 199 `i `uc ]
-[; ;D_Clock.c: 309: bcd_to_ascii (__date) ;
-"309
-[e ( _bcd_to_ascii (1 ___date ]
-[; ;D_Clock.c: 310: lcd_data ('/');
-"310
-[e ( _lcd_data (1 -> -> 47 `ui `uc ]
-[; ;D_Clock.c: 311: bcd_to_ascii (__month);
-"311
-[e ( _bcd_to_ascii (1 ___month ]
-[; ;D_Clock.c: 312: lcd_data ('/');
-"312
-[e ( _lcd_data (1 -> -> 47 `ui `uc ]
-[; ;D_Clock.c: 313: bcd_to_ascii (__year);
-"313
-[e ( _bcd_to_ascii (1 ___year ]
-[; ;D_Clock.c: 314: }
-"314
-[e :UE 153 ]
+"61
+[e $U 232  ]
+[e :U 233 ]
+[; ;D_Clock.c: 67: }
+[; ;D_Clock.c: 68: }
+[; ;D_Clock.c: 70: return ;
+"70
+[e $UE 230  ]
+[; ;D_Clock.c: 71: }
+"71
+[e :UE 230 ]
 }
-"316
-[v _bcd_to_ascii `(v ~T0 @X0 1 ef1`uc ]
-"317
-{
-[; ;D_Clock.c: 316: void bcd_to_ascii (unsigned char value)
-[; ;D_Clock.c: 317: {
-[e :U _bcd_to_ascii ]
-"316
-[v _value `uc ~T0 @X0 1 r1 ]
-"317
-[f ]
-"318
-[v _bcd `uc ~T0 @X0 1 a ]
-[; ;D_Clock.c: 318: unsigned char bcd ;
-[; ;D_Clock.c: 319: bcd = value ;
-"319
-[e = _bcd _value ]
-[; ;D_Clock.c: 320: bcd = bcd & 0xf0 ;
-"320
-[e = _bcd -> & -> _bcd `i -> 240 `i `uc ]
-[; ;D_Clock.c: 321: bcd = bcd >> 4 ;
-"321
-[e = _bcd -> >> -> _bcd `i -> 4 `i `uc ]
-[; ;D_Clock.c: 322: bcd = bcd | 0x30 ;
-"322
-[e = _bcd -> | -> _bcd `i -> 48 `i `uc ]
-[; ;D_Clock.c: 323: lcd_data (bcd) ;
-"323
-[e ( _lcd_data (1 _bcd ]
-[; ;D_Clock.c: 325: bcd = value ;
-"325
-[e = _bcd _value ]
-[; ;D_Clock.c: 326: bcd = bcd & 0x0f ;
-"326
-[e = _bcd -> & -> _bcd `i -> 15 `i `uc ]
-[; ;D_Clock.c: 327: bcd = bcd | 0x30 ;
-"327
-[e = _bcd -> | -> _bcd `i -> 48 `i `uc ]
-[; ;D_Clock.c: 328: lcd_data (bcd) ;
-"328
-[e ( _lcd_data (1 _bcd ]
-[; ;D_Clock.c: 329: }
-"329
-[e :UE 232 ]
-}
-"331
-[v _bcd_to_decimal `(uc ~T0 @X0 1 ef1`uc ]
-"332
-{
-[; ;D_Clock.c: 331: char bcd_to_decimal (unsigned char value)
-[; ;D_Clock.c: 332: {
-[e :U _bcd_to_decimal ]
-"331
-[v _value `uc ~T0 @X0 1 r1 ]
-"332
-[f ]
-"333
-[v _dec `uc ~T0 @X0 1 a ]
-[; ;D_Clock.c: 333: unsigned char dec ;
-[; ;D_Clock.c: 334: dec = value ;
-"334
-[e = _dec _value ]
-[; ;D_Clock.c: 335: dec = dec & 0xf0 ;
-"335
-[e = _dec -> & -> _dec `i -> 240 `i `uc ]
-[; ;D_Clock.c: 336: dec = dec >> 4 ;
-"336
-[e = _dec -> >> -> _dec `i -> 4 `i `uc ]
-[; ;D_Clock.c: 337: dec = dec * 10 ;
-"337
-[e = _dec -> * -> _dec `i -> 10 `i `uc ]
-[; ;D_Clock.c: 338: dec = dec + (value & 0x0f) ;
-"338
-[e = _dec -> + -> _dec `i & -> _value `i -> 15 `i `uc ]
-[; ;D_Clock.c: 339: return (dec) ;
-"339
-[e ) _dec ]
-[e $UE 233  ]
-[; ;D_Clock.c: 340: }
-"340
-[e :UE 233 ]
-}
-"342
-[v _decimal_to_bcd `(uc ~T0 @X0 1 ef1`uc ]
-"343
-{
-[; ;D_Clock.c: 342: char decimal_to_bcd (unsigned char value)
-[; ;D_Clock.c: 343: {
-[e :U _decimal_to_bcd ]
-"342
-[v _value `uc ~T0 @X0 1 r1 ]
-"343
-[f ]
-"344
-[v _msb `uc ~T0 @X0 1 a ]
-"345
-[v _lsb `uc ~T0 @X0 1 a ]
-"346
-[v _hex `uc ~T0 @X0 1 a ]
-[; ;D_Clock.c: 344: unsigned char msb ;
-[; ;D_Clock.c: 345: unsigned char lsb ;
-[; ;D_Clock.c: 346: unsigned char hex ;
-[; ;D_Clock.c: 348: msb = value / 10 ;
-"348
-[e = _msb -> / -> _value `i -> 10 `i `uc ]
-[; ;D_Clock.c: 349: lsb = value % 10 ;
-"349
-[e = _lsb -> % -> _value `i -> 10 `i `uc ]
-[; ;D_Clock.c: 350: hex = ((msb<< 4) + lsb ) ;
-"350
-[e = _hex -> + << -> _msb `i -> 4 `i -> _lsb `i `uc ]
-[; ;D_Clock.c: 351: return (hex) ;
-"351
-[e ) _hex ]
-[e $UE 234  ]
-[; ;D_Clock.c: 352: }
-"352
-[e :UE 234 ]
-}
-"354
+"73
 [v _set_timing `(v ~T0 @X0 1 ef ]
-"355
+"74
 {
-[; ;D_Clock.c: 354: void set_timing ()
-[; ;D_Clock.c: 355: {
+[; ;D_Clock.c: 73: void set_timing ()
+[; ;D_Clock.c: 74: {
 [e :U _set_timing ]
 [f ]
-"356
+"75
 [v _decimal_val_second `uc ~T0 @X0 1 a ]
-"357
+"76
 [v _bcd_val_second `uc ~T0 @X0 1 a ]
-"358
+"77
 [v _decimal_val_minute `uc ~T0 @X0 1 a ]
-"359
+"78
 [v _bcd_val_minute `uc ~T0 @X0 1 a ]
-"360
+"79
 [v _decimal_val_hour `uc ~T0 @X0 1 a ]
-"361
+"80
 [v _bcd_val_hour `uc ~T0 @X0 1 a ]
-"362
+"81
 [v _decimal_val_date `uc ~T0 @X0 1 a ]
-"363
+"82
 [v _bcd_val_date `uc ~T0 @X0 1 a ]
-"364
+"83
 [v _decimal_val_month `uc ~T0 @X0 1 a ]
-"365
+"84
 [v _bcd_val_month `uc ~T0 @X0 1 a ]
-"366
+"85
 [v _decimal_val_year `uc ~T0 @X0 1 a ]
-"367
+"86
 [v _bcd_val_year `uc ~T0 @X0 1 a ]
-[; ;D_Clock.c: 356: unsigned char decimal_val_second ;
-[; ;D_Clock.c: 357: unsigned char bcd_val_second ;
-[; ;D_Clock.c: 358: unsigned char decimal_val_minute ;
-[; ;D_Clock.c: 359: unsigned char bcd_val_minute ;
-[; ;D_Clock.c: 360: unsigned char decimal_val_hour ;
-[; ;D_Clock.c: 361: unsigned char bcd_val_hour ;
-[; ;D_Clock.c: 362: unsigned char decimal_val_date ;
-[; ;D_Clock.c: 363: unsigned char bcd_val_date ;
-[; ;D_Clock.c: 364: unsigned char decimal_val_month ;
-[; ;D_Clock.c: 365: unsigned char bcd_val_month ;
-[; ;D_Clock.c: 366: unsigned char decimal_val_year ;
-[; ;D_Clock.c: 367: unsigned char bcd_val_year ;
-[; ;D_Clock.c: 369: decimal_val_second = bcd_to_decimal (__second) ;
-"369
+[; ;D_Clock.c: 75: unsigned char decimal_val_second ;
+[; ;D_Clock.c: 76: unsigned char bcd_val_second ;
+[; ;D_Clock.c: 77: unsigned char decimal_val_minute ;
+[; ;D_Clock.c: 78: unsigned char bcd_val_minute ;
+[; ;D_Clock.c: 79: unsigned char decimal_val_hour ;
+[; ;D_Clock.c: 80: unsigned char bcd_val_hour ;
+[; ;D_Clock.c: 81: unsigned char decimal_val_date ;
+[; ;D_Clock.c: 82: unsigned char bcd_val_date ;
+[; ;D_Clock.c: 83: unsigned char decimal_val_month ;
+[; ;D_Clock.c: 84: unsigned char bcd_val_month ;
+[; ;D_Clock.c: 85: unsigned char decimal_val_year ;
+[; ;D_Clock.c: 86: unsigned char bcd_val_year ;
+[; ;D_Clock.c: 88: decimal_val_second = bcd_to_decimal (__second) ;
+"88
 [e = _decimal_val_second ( _bcd_to_decimal (1 ___second ]
-[; ;D_Clock.c: 370: bcd_val_second =__second ;
-"370
+[; ;D_Clock.c: 89: bcd_val_second =__second ;
+"89
 [e = _bcd_val_second ___second ]
-[; ;D_Clock.c: 371: decimal_val_minute = bcd_to_decimal (__minute) ;
-"371
+[; ;D_Clock.c: 90: decimal_val_minute = bcd_to_decimal (__minute) ;
+"90
 [e = _decimal_val_minute ( _bcd_to_decimal (1 ___minute ]
-[; ;D_Clock.c: 372: bcd_val_minute =__minute ;
-"372
+[; ;D_Clock.c: 91: bcd_val_minute =__minute ;
+"91
 [e = _bcd_val_minute ___minute ]
-[; ;D_Clock.c: 373: decimal_val_hour = bcd_to_decimal (__hour) ;
-"373
+[; ;D_Clock.c: 92: decimal_val_hour = bcd_to_decimal (__hour) ;
+"92
 [e = _decimal_val_hour ( _bcd_to_decimal (1 ___hour ]
-[; ;D_Clock.c: 374: bcd_val_hour =__hour ;
-"374
+[; ;D_Clock.c: 93: bcd_val_hour =__hour ;
+"93
 [e = _bcd_val_hour ___hour ]
-[; ;D_Clock.c: 375: decimal_val_date = bcd_to_decimal (__date) ;
-"375
+[; ;D_Clock.c: 94: decimal_val_date = bcd_to_decimal (__date) ;
+"94
 [e = _decimal_val_date ( _bcd_to_decimal (1 ___date ]
-[; ;D_Clock.c: 376: bcd_val_date =__date ;
-"376
+[; ;D_Clock.c: 95: bcd_val_date =__date ;
+"95
 [e = _bcd_val_date ___date ]
-[; ;D_Clock.c: 377: decimal_val_month = bcd_to_decimal (__month) ;
-"377
+[; ;D_Clock.c: 96: decimal_val_month = bcd_to_decimal (__month) ;
+"96
 [e = _decimal_val_month ( _bcd_to_decimal (1 ___month ]
-[; ;D_Clock.c: 378: bcd_val_month =__month ;
-"378
+[; ;D_Clock.c: 97: bcd_val_month =__month ;
+"97
 [e = _bcd_val_month ___month ]
-[; ;D_Clock.c: 379: decimal_val_year = bcd_to_decimal (__year) ;
-"379
+[; ;D_Clock.c: 98: decimal_val_year = bcd_to_decimal (__year) ;
+"98
 [e = _decimal_val_year ( _bcd_to_decimal (1 ___year ]
-[; ;D_Clock.c: 380: bcd_val_year =__year ;
-"380
+[; ;D_Clock.c: 99: bcd_val_year =__year ;
+"99
 [e = _bcd_val_year ___year ]
-[; ;D_Clock.c: 382: lcd_init ();
-"382
+[; ;D_Clock.c: 101: lcd_init ();
+"101
 [e ( _lcd_init ..  ]
-[; ;D_Clock.c: 384: while (PORTBbits.RB6 == 0)
-"384
+[; ;D_Clock.c: 103: while (PORTBbits.RB6 == 0)
+"103
 [e $U 236  ]
 [e :U 237 ]
-[; ;D_Clock.c: 385: {
-"385
+[; ;D_Clock.c: 104: {
+"104
 {
-[; ;D_Clock.c: 387: if (timing_flag == 1)
-"387
+[; ;D_Clock.c: 106: if (timing_flag == 1)
+"106
 [e $ ! == -> _timing_flag `i -> 1 `i 239  ]
-[; ;D_Clock.c: 388: {
-"388
+[; ;D_Clock.c: 107: {
+"107
 {
-[; ;D_Clock.c: 389: lcd_command(0x01);
-"389
+[; ;D_Clock.c: 108: lcd_command(0x01);
+"108
 [e ( _lcd_command (1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 390: lcd_command (0x83);
-"390
+[; ;D_Clock.c: 109: lcd_command (0x83);
+"109
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 391: lcd_string ("SEC.:",5);
-"391
+[; ;D_Clock.c: 110: lcd_string ("SEC.:",5);
+"110
 [e ( _lcd_string (2 , :s 3C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 392: lcd_command (0x89) ;
-"392
+[; ;D_Clock.c: 111: lcd_command (0x89) ;
+"111
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 393: bcd_to_ascii (bcd_val_second) ;
-"393
+[; ;D_Clock.c: 112: bcd_to_ascii (bcd_val_second) ;
+"112
 [e ( _bcd_to_ascii (1 _bcd_val_second ]
-[; ;D_Clock.c: 395: if(PORTBbits.RB4 == 1)
-"395
+[; ;D_Clock.c: 113: _delay((unsigned long)((100)*(20000000/4000.0)));
+"113
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 115: if(PORTBbits.RB4 == 1)
+"115
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 1 `i 240  ]
-[; ;D_Clock.c: 396: {
-"396
+[; ;D_Clock.c: 116: {
+"116
 {
-[; ;D_Clock.c: 397: while(PORTBbits.RB4 == 1 );
-"397
+[; ;D_Clock.c: 117: while(PORTBbits.RB4 == 1 );
+"117
 [e $U 241  ]
 [e :U 242 ]
 [e :U 241 ]
 [e $ == -> . . _PORTBbits 0 4 `i -> 1 `i 242  ]
 [e :U 243 ]
-[; ;D_Clock.c: 398: decimal_val_second ++ ;
-"398
+[; ;D_Clock.c: 118: decimal_val_second ++ ;
+"118
 [e ++ _decimal_val_second -> -> 1 `i `uc ]
-[; ;D_Clock.c: 399: if(decimal_val_second == 60)
-"399
+[; ;D_Clock.c: 119: if(decimal_val_second == 60)
+"119
 [e $ ! == -> _decimal_val_second `i -> 60 `i 244  ]
-[; ;D_Clock.c: 400: {
-"400
+[; ;D_Clock.c: 120: {
+"120
 {
-[; ;D_Clock.c: 401: decimal_val_second =0 ;
-"401
+[; ;D_Clock.c: 121: decimal_val_second =0 ;
+"121
 [e = _decimal_val_second -> -> 0 `i `uc ]
-"402
+"122
 }
 [e :U 244 ]
-[; ;D_Clock.c: 402: }
-[; ;D_Clock.c: 403: _delay((unsigned long)((100)*(20000000/4000.0)));
-"403
+[; ;D_Clock.c: 122: }
+[; ;D_Clock.c: 123: _delay((unsigned long)((100)*(20000000/4000.0)));
+"123
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 404: lcd_command (0x83);
-"404
-[e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 405: lcd_string ("SEC.:",5);
-"405
-[e ( _lcd_string (2 , :s 4C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 406: lcd_command (0x89) ;
-"406
+[; ;D_Clock.c: 126: lcd_command (0x89) ;
+"126
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 407: bcd_val_second = decimal_to_bcd (decimal_val_second);
-"407
+[; ;D_Clock.c: 127: bcd_val_second = decimal_to_bcd (decimal_val_second);
+"127
 [e = _bcd_val_second ( _decimal_to_bcd (1 _decimal_val_second ]
-[; ;D_Clock.c: 408: bcd_to_ascii (bcd_val_second) ;
-"408
+[; ;D_Clock.c: 128: bcd_to_ascii (bcd_val_second) ;
+"128
 [e ( _bcd_to_ascii (1 _bcd_val_second ]
-[; ;D_Clock.c: 409: lcd_init ();
-"409
+[; ;D_Clock.c: 129: lcd_init ();
+"129
 [e ( _lcd_init ..  ]
-"410
+"130
 }
 [e :U 240 ]
-[; ;D_Clock.c: 410: }
-[; ;D_Clock.c: 411: if(PORTBbits.RB5 == 1)
-"411
+[; ;D_Clock.c: 130: }
+[; ;D_Clock.c: 131: if(PORTBbits.RB5 == 1)
+"131
 [e $ ! == -> . . _PORTBbits 0 5 `i -> 1 `i 245  ]
-[; ;D_Clock.c: 412: {
-"412
+[; ;D_Clock.c: 132: {
+"132
 {
-[; ;D_Clock.c: 413: while(PORTBbits.RB5 == 1 );
-"413
+[; ;D_Clock.c: 133: while(PORTBbits.RB5 == 1 );
+"133
 [e $U 246  ]
 [e :U 247 ]
 [e :U 246 ]
 [e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 247  ]
 [e :U 248 ]
-[; ;D_Clock.c: 414: decimal_val_second -- ;
-"414
+[; ;D_Clock.c: 134: decimal_val_second -- ;
+"134
 [e -- _decimal_val_second -> -> 1 `i `uc ]
-[; ;D_Clock.c: 415: if(decimal_val_second == 0)
-"415
+[; ;D_Clock.c: 135: if(decimal_val_second == 0)
+"135
 [e $ ! == -> _decimal_val_second `i -> 0 `i 249  ]
-[; ;D_Clock.c: 416: {
-"416
+[; ;D_Clock.c: 136: {
+"136
 {
-[; ;D_Clock.c: 417: decimal_val_second = 59 ;
-"417
+[; ;D_Clock.c: 137: decimal_val_second = 59 ;
+"137
 [e = _decimal_val_second -> -> 59 `i `uc ]
-"418
+"138
 }
 [e :U 249 ]
-[; ;D_Clock.c: 418: }
-[; ;D_Clock.c: 419: _delay((unsigned long)((100)*(20000000/4000.0)));
-"419
+[; ;D_Clock.c: 138: }
+[; ;D_Clock.c: 139: _delay((unsigned long)((100)*(20000000/4000.0)));
+"139
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 420: lcd_command (0x83);
-"420
-[e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 421: lcd_string ("SEC.:",5);
-"421
-[e ( _lcd_string (2 , :s 5C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 422: lcd_command (0x89) ;
-"422
+[; ;D_Clock.c: 142: lcd_command (0x89) ;
+"142
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 423: bcd_val_second = decimal_to_bcd (decimal_val_second);
-"423
+[; ;D_Clock.c: 143: bcd_val_second = decimal_to_bcd (decimal_val_second);
+"143
 [e = _bcd_val_second ( _decimal_to_bcd (1 _decimal_val_second ]
-[; ;D_Clock.c: 424: bcd_to_ascii (bcd_val_second) ;
-"424
+[; ;D_Clock.c: 144: bcd_to_ascii (bcd_val_second) ;
+"144
 [e ( _bcd_to_ascii (1 _bcd_val_second ]
-[; ;D_Clock.c: 425: lcd_init ();
-"425
+[; ;D_Clock.c: 145: lcd_init ();
+"145
 [e ( _lcd_init ..  ]
-"426
+"146
 }
 [e :U 245 ]
-"428
+"148
 }
 [e :U 239 ]
-[; ;D_Clock.c: 426: }
-[; ;D_Clock.c: 428: }
-[; ;D_Clock.c: 430: if (timing_flag == 2)
-"430
+[; ;D_Clock.c: 146: }
+[; ;D_Clock.c: 148: }
+[; ;D_Clock.c: 150: if (timing_flag == 2)
+"150
 [e $ ! == -> _timing_flag `i -> 2 `i 250  ]
-[; ;D_Clock.c: 431: {
-"431
+[; ;D_Clock.c: 151: {
+"151
 {
-[; ;D_Clock.c: 432: lcd_command(0x01);
-"432
+[; ;D_Clock.c: 152: lcd_command(0x01);
+"152
 [e ( _lcd_command (1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 433: lcd_command (0x83);
-"433
+[; ;D_Clock.c: 153: lcd_command (0x83);
+"153
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 434: lcd_string ("MIN.:",5);
-"434
-[e ( _lcd_string (2 , :s 6C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 435: lcd_command (0x89) ;
-"435
+[; ;D_Clock.c: 154: lcd_string ("MIN.:",5);
+"154
+[e ( _lcd_string (2 , :s 4C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 155: lcd_command (0x89) ;
+"155
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 436: bcd_to_ascii (bcd_val_minute) ;
-"436
+[; ;D_Clock.c: 156: bcd_to_ascii (bcd_val_minute) ;
+"156
 [e ( _bcd_to_ascii (1 _bcd_val_minute ]
-[; ;D_Clock.c: 438: if(PORTBbits.RB4 == 1)
-"438
+[; ;D_Clock.c: 157: _delay((unsigned long)((100)*(20000000/4000.0)));
+"157
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 159: if(PORTBbits.RB4 == 1)
+"159
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 1 `i 251  ]
-[; ;D_Clock.c: 439: {
-"439
+[; ;D_Clock.c: 160: {
+"160
 {
-[; ;D_Clock.c: 440: while(PORTBbits.RB4 == 1 );
-"440
+[; ;D_Clock.c: 161: while(PORTBbits.RB4 == 1 );
+"161
 [e $U 252  ]
 [e :U 253 ]
 [e :U 252 ]
 [e $ == -> . . _PORTBbits 0 4 `i -> 1 `i 253  ]
 [e :U 254 ]
-[; ;D_Clock.c: 441: decimal_val_minute ++ ;
-"441
+[; ;D_Clock.c: 162: decimal_val_minute ++ ;
+"162
 [e ++ _decimal_val_minute -> -> 1 `i `uc ]
-[; ;D_Clock.c: 442: if(decimal_val_minute == 60)
-"442
+[; ;D_Clock.c: 163: if(decimal_val_minute == 60)
+"163
 [e $ ! == -> _decimal_val_minute `i -> 60 `i 255  ]
-[; ;D_Clock.c: 443: {
-"443
+[; ;D_Clock.c: 164: {
+"164
 {
-[; ;D_Clock.c: 444: decimal_val_minute =0 ;
-"444
+[; ;D_Clock.c: 165: decimal_val_minute =0 ;
+"165
 [e = _decimal_val_minute -> -> 0 `i `uc ]
-"445
+"166
 }
 [e :U 255 ]
-[; ;D_Clock.c: 445: }
-[; ;D_Clock.c: 446: _delay((unsigned long)((100)*(20000000/4000.0)));
-"446
+[; ;D_Clock.c: 166: }
+[; ;D_Clock.c: 167: _delay((unsigned long)((100)*(20000000/4000.0)));
+"167
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 447: lcd_command (0x83);
-"447
+[; ;D_Clock.c: 168: lcd_command (0x83);
+"168
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 448: lcd_string ("MIN.:",5);
-"448
-[e ( _lcd_string (2 , :s 7C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 449: lcd_command (0x89) ;
-"449
+[; ;D_Clock.c: 169: lcd_string ("MIN.:",5);
+"169
+[e ( _lcd_string (2 , :s 5C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 170: lcd_command (0x89) ;
+"170
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 450: bcd_val_minute = decimal_to_bcd (decimal_val_minute);
-"450
+[; ;D_Clock.c: 171: bcd_val_minute = decimal_to_bcd (decimal_val_minute);
+"171
 [e = _bcd_val_minute ( _decimal_to_bcd (1 _decimal_val_minute ]
-[; ;D_Clock.c: 451: bcd_to_ascii (bcd_val_minute) ;
-"451
+[; ;D_Clock.c: 172: bcd_to_ascii (bcd_val_minute) ;
+"172
 [e ( _bcd_to_ascii (1 _bcd_val_minute ]
-[; ;D_Clock.c: 452: lcd_init ();
-"452
+[; ;D_Clock.c: 173: lcd_init ();
+"173
 [e ( _lcd_init ..  ]
-"453
+"174
 }
 [e :U 251 ]
-[; ;D_Clock.c: 453: }
-[; ;D_Clock.c: 454: if(PORTBbits.RB5 == 1)
-"454
+[; ;D_Clock.c: 174: }
+[; ;D_Clock.c: 175: if(PORTBbits.RB5 == 1)
+"175
 [e $ ! == -> . . _PORTBbits 0 5 `i -> 1 `i 256  ]
-[; ;D_Clock.c: 455: {
-"455
+[; ;D_Clock.c: 176: {
+"176
 {
-[; ;D_Clock.c: 456: while(PORTBbits.RB5 == 1 );
-"456
+[; ;D_Clock.c: 177: while(PORTBbits.RB5 == 1 );
+"177
 [e $U 257  ]
 [e :U 258 ]
 [e :U 257 ]
 [e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 258  ]
 [e :U 259 ]
-[; ;D_Clock.c: 457: decimal_val_minute -- ;
-"457
+[; ;D_Clock.c: 178: decimal_val_minute -- ;
+"178
 [e -- _decimal_val_minute -> -> 1 `i `uc ]
-[; ;D_Clock.c: 458: if(decimal_val_minute == 0)
-"458
+[; ;D_Clock.c: 179: if(decimal_val_minute == 0)
+"179
 [e $ ! == -> _decimal_val_minute `i -> 0 `i 260  ]
-[; ;D_Clock.c: 459: {
-"459
+[; ;D_Clock.c: 180: {
+"180
 {
-[; ;D_Clock.c: 460: decimal_val_minute = 59 ;
-"460
+[; ;D_Clock.c: 181: decimal_val_minute = 59 ;
+"181
 [e = _decimal_val_minute -> -> 59 `i `uc ]
-"461
+"182
 }
 [e :U 260 ]
-[; ;D_Clock.c: 461: }
-[; ;D_Clock.c: 462: _delay((unsigned long)((100)*(20000000/4000.0)));
-"462
+[; ;D_Clock.c: 182: }
+[; ;D_Clock.c: 183: _delay((unsigned long)((100)*(20000000/4000.0)));
+"183
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 463: lcd_command (0x83);
-"463
+[; ;D_Clock.c: 184: lcd_command (0x83);
+"184
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 464: lcd_string ("MIN.:",5);
-"464
-[e ( _lcd_string (2 , :s 8C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 465: lcd_command (0x89) ;
-"465
+[; ;D_Clock.c: 185: lcd_string ("MIN.:",5);
+"185
+[e ( _lcd_string (2 , :s 6C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 186: lcd_command (0x89) ;
+"186
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 466: bcd_val_minute = decimal_to_bcd (decimal_val_minute);
-"466
+[; ;D_Clock.c: 187: bcd_val_minute = decimal_to_bcd (decimal_val_minute);
+"187
 [e = _bcd_val_minute ( _decimal_to_bcd (1 _decimal_val_minute ]
-[; ;D_Clock.c: 467: bcd_to_ascii (bcd_val_minute) ;
-"467
+[; ;D_Clock.c: 188: bcd_to_ascii (bcd_val_minute) ;
+"188
 [e ( _bcd_to_ascii (1 _bcd_val_minute ]
-[; ;D_Clock.c: 468: lcd_init ();
-"468
+[; ;D_Clock.c: 189: lcd_init ();
+"189
 [e ( _lcd_init ..  ]
-"469
+"190
 }
 [e :U 256 ]
-"470
+"191
 }
 [e :U 250 ]
-[; ;D_Clock.c: 469: }
-[; ;D_Clock.c: 470: }
-[; ;D_Clock.c: 472: if (timing_flag == 3)
-"472
+[; ;D_Clock.c: 190: }
+[; ;D_Clock.c: 191: }
+[; ;D_Clock.c: 193: if (timing_flag == 3)
+"193
 [e $ ! == -> _timing_flag `i -> 3 `i 261  ]
-[; ;D_Clock.c: 473: {
-"473
+[; ;D_Clock.c: 194: {
+"194
 {
-[; ;D_Clock.c: 474: lcd_command(0x01);
-"474
+[; ;D_Clock.c: 195: lcd_command(0x01);
+"195
 [e ( _lcd_command (1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 475: lcd_command (0x83);
-"475
+[; ;D_Clock.c: 196: lcd_command (0x83);
+"196
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 476: lcd_string ("hour:",5);
-"476
-[e ( _lcd_string (2 , :s 9C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 477: lcd_command (0x89) ;
-"477
+[; ;D_Clock.c: 197: lcd_string ("hour:",5);
+"197
+[e ( _lcd_string (2 , :s 7C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 198: lcd_command (0x89) ;
+"198
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 478: bcd_to_ascii (bcd_val_hour) ;
-"478
+[; ;D_Clock.c: 199: bcd_to_ascii (bcd_val_hour) ;
+"199
 [e ( _bcd_to_ascii (1 _bcd_val_hour ]
-[; ;D_Clock.c: 480: if(PORTBbits.RB4 == 1)
-"480
+[; ;D_Clock.c: 200: _delay((unsigned long)((100)*(20000000/4000.0)));
+"200
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 202: if(PORTBbits.RB4 == 1)
+"202
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 1 `i 262  ]
-[; ;D_Clock.c: 481: {
-"481
+[; ;D_Clock.c: 203: {
+"203
 {
-[; ;D_Clock.c: 482: while(PORTBbits.RB4 == 1 );
-"482
+[; ;D_Clock.c: 204: while(PORTBbits.RB4 == 1 );
+"204
 [e $U 263  ]
 [e :U 264 ]
 [e :U 263 ]
 [e $ == -> . . _PORTBbits 0 4 `i -> 1 `i 264  ]
 [e :U 265 ]
-[; ;D_Clock.c: 483: decimal_val_hour ++ ;
-"483
+[; ;D_Clock.c: 205: decimal_val_hour ++ ;
+"205
 [e ++ _decimal_val_hour -> -> 1 `i `uc ]
-[; ;D_Clock.c: 484: if(decimal_val_hour == 60)
-"484
+[; ;D_Clock.c: 206: if(decimal_val_hour == 60)
+"206
 [e $ ! == -> _decimal_val_hour `i -> 60 `i 266  ]
-[; ;D_Clock.c: 485: {
-"485
+[; ;D_Clock.c: 207: {
+"207
 {
-[; ;D_Clock.c: 486: decimal_val_hour =0 ;
-"486
+[; ;D_Clock.c: 208: decimal_val_hour =0 ;
+"208
 [e = _decimal_val_hour -> -> 0 `i `uc ]
-"487
+"209
 }
 [e :U 266 ]
-[; ;D_Clock.c: 487: }
-[; ;D_Clock.c: 488: _delay((unsigned long)((100)*(20000000/4000.0)));
-"488
+[; ;D_Clock.c: 209: }
+[; ;D_Clock.c: 210: _delay((unsigned long)((100)*(20000000/4000.0)));
+"210
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 489: lcd_command (0x83);
-"489
+[; ;D_Clock.c: 211: lcd_command (0x83);
+"211
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 490: lcd_string ("SEC.:",5);
-"490
-[e ( _lcd_string (2 , :s 10C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 491: lcd_command (0x89) ;
-"491
+[; ;D_Clock.c: 212: lcd_string ("SEC.:",5);
+"212
+[e ( _lcd_string (2 , :s 8C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 213: lcd_command (0x89) ;
+"213
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 492: bcd_val_hour = decimal_to_bcd (decimal_val_hour);
-"492
+[; ;D_Clock.c: 214: bcd_val_hour = decimal_to_bcd (decimal_val_hour);
+"214
 [e = _bcd_val_hour ( _decimal_to_bcd (1 _decimal_val_hour ]
-[; ;D_Clock.c: 493: bcd_to_ascii (bcd_val_hour) ;
-"493
+[; ;D_Clock.c: 215: bcd_to_ascii (bcd_val_hour) ;
+"215
 [e ( _bcd_to_ascii (1 _bcd_val_hour ]
-[; ;D_Clock.c: 494: lcd_init ();
-"494
+[; ;D_Clock.c: 216: lcd_init ();
+"216
 [e ( _lcd_init ..  ]
-"495
+"217
 }
 [e :U 262 ]
-[; ;D_Clock.c: 495: }
-[; ;D_Clock.c: 496: if(PORTBbits.RB5 == 1)
-"496
+[; ;D_Clock.c: 217: }
+[; ;D_Clock.c: 218: if(PORTBbits.RB5 == 1)
+"218
 [e $ ! == -> . . _PORTBbits 0 5 `i -> 1 `i 267  ]
-[; ;D_Clock.c: 497: {
-"497
+[; ;D_Clock.c: 219: {
+"219
 {
-[; ;D_Clock.c: 498: while(PORTBbits.RB5 == 1 );
-"498
+[; ;D_Clock.c: 220: while(PORTBbits.RB5 == 1 );
+"220
 [e $U 268  ]
 [e :U 269 ]
 [e :U 268 ]
 [e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 269  ]
 [e :U 270 ]
-[; ;D_Clock.c: 499: decimal_val_hour -- ;
-"499
+[; ;D_Clock.c: 221: decimal_val_hour -- ;
+"221
 [e -- _decimal_val_hour -> -> 1 `i `uc ]
-[; ;D_Clock.c: 500: if(decimal_val_hour == 0)
-"500
+[; ;D_Clock.c: 222: if(decimal_val_hour == 0)
+"222
 [e $ ! == -> _decimal_val_hour `i -> 0 `i 271  ]
-[; ;D_Clock.c: 501: {
-"501
+[; ;D_Clock.c: 223: {
+"223
 {
-[; ;D_Clock.c: 502: decimal_val_hour = 59 ;
-"502
+[; ;D_Clock.c: 224: decimal_val_hour = 59 ;
+"224
 [e = _decimal_val_hour -> -> 59 `i `uc ]
-"503
+"225
 }
 [e :U 271 ]
-[; ;D_Clock.c: 503: }
-[; ;D_Clock.c: 504: _delay((unsigned long)((100)*(20000000/4000.0)));
-"504
+[; ;D_Clock.c: 225: }
+[; ;D_Clock.c: 226: _delay((unsigned long)((100)*(20000000/4000.0)));
+"226
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 505: lcd_command (0x83);
-"505
+[; ;D_Clock.c: 227: lcd_command (0x83);
+"227
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 506: lcd_string ("SEC.:",5);
-"506
-[e ( _lcd_string (2 , :s 11C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 507: lcd_command (0x89) ;
-"507
+[; ;D_Clock.c: 228: lcd_string ("SEC.:",5);
+"228
+[e ( _lcd_string (2 , :s 9C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 229: lcd_command (0x89) ;
+"229
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 508: bcd_val_hour = decimal_to_bcd (decimal_val_hour);
-"508
+[; ;D_Clock.c: 230: bcd_val_hour = decimal_to_bcd (decimal_val_hour);
+"230
 [e = _bcd_val_hour ( _decimal_to_bcd (1 _decimal_val_hour ]
-[; ;D_Clock.c: 509: bcd_to_ascii (bcd_val_hour) ;
-"509
+[; ;D_Clock.c: 231: bcd_to_ascii (bcd_val_hour) ;
+"231
 [e ( _bcd_to_ascii (1 _bcd_val_hour ]
-[; ;D_Clock.c: 510: lcd_init ();
-"510
+[; ;D_Clock.c: 232: lcd_init ();
+"232
 [e ( _lcd_init ..  ]
-"511
+"233
 }
 [e :U 267 ]
-"512
+"234
 }
 [e :U 261 ]
-[; ;D_Clock.c: 511: }
-[; ;D_Clock.c: 512: }
-[; ;D_Clock.c: 514: if (timing_flag == 4 )
-"514
+[; ;D_Clock.c: 233: }
+[; ;D_Clock.c: 234: }
+[; ;D_Clock.c: 236: if (timing_flag == 4 )
+"236
 [e $ ! == -> _timing_flag `i -> 4 `i 272  ]
-[; ;D_Clock.c: 515: {
-"515
+[; ;D_Clock.c: 237: {
+"237
 {
-[; ;D_Clock.c: 516: lcd_command(0x01);
-"516
+[; ;D_Clock.c: 238: lcd_command(0x01);
+"238
 [e ( _lcd_command (1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 517: lcd_command (0x83);
-"517
+[; ;D_Clock.c: 239: lcd_command (0x83);
+"239
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 518: lcd_string ("DATE:",5);
-"518
-[e ( _lcd_string (2 , :s 12C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 519: lcd_command (0x89) ;
-"519
+[; ;D_Clock.c: 240: lcd_string ("DATE:",5);
+"240
+[e ( _lcd_string (2 , :s 10C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 241: lcd_command (0x89) ;
+"241
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 520: bcd_to_ascii (bcd_val_date) ;
-"520
+[; ;D_Clock.c: 242: bcd_to_ascii (bcd_val_date) ;
+"242
 [e ( _bcd_to_ascii (1 _bcd_val_date ]
-[; ;D_Clock.c: 522: if(PORTBbits.RB4 == 1)
-"522
+[; ;D_Clock.c: 243: _delay((unsigned long)((100)*(20000000/4000.0)));
+"243
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 245: if(PORTBbits.RB4 == 1)
+"245
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 1 `i 273  ]
-[; ;D_Clock.c: 523: {
-"523
+[; ;D_Clock.c: 246: {
+"246
 {
-[; ;D_Clock.c: 524: while(PORTBbits.RB4 == 1 );
-"524
+[; ;D_Clock.c: 247: while(PORTBbits.RB4 == 1 );
+"247
 [e $U 274  ]
 [e :U 275 ]
 [e :U 274 ]
 [e $ == -> . . _PORTBbits 0 4 `i -> 1 `i 275  ]
 [e :U 276 ]
-[; ;D_Clock.c: 525: decimal_val_date ++ ;
-"525
+[; ;D_Clock.c: 248: decimal_val_date ++ ;
+"248
 [e ++ _decimal_val_date -> -> 1 `i `uc ]
-[; ;D_Clock.c: 526: if(decimal_val_date == 32)
-"526
+[; ;D_Clock.c: 249: if(decimal_val_date == 32)
+"249
 [e $ ! == -> _decimal_val_date `i -> 32 `i 277  ]
-[; ;D_Clock.c: 527: {
-"527
+[; ;D_Clock.c: 250: {
+"250
 {
-[; ;D_Clock.c: 528: decimal_val_date =0 ;
-"528
+[; ;D_Clock.c: 251: decimal_val_date =0 ;
+"251
 [e = _decimal_val_date -> -> 0 `i `uc ]
-"529
+"252
 }
 [e :U 277 ]
-[; ;D_Clock.c: 529: }
-[; ;D_Clock.c: 530: _delay((unsigned long)((100)*(20000000/4000.0)));
-"530
+[; ;D_Clock.c: 252: }
+[; ;D_Clock.c: 253: _delay((unsigned long)((100)*(20000000/4000.0)));
+"253
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 531: lcd_command (0x83);
-"531
+[; ;D_Clock.c: 254: lcd_command (0x83);
+"254
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 532: lcd_string ("DATE:",5);
-"532
-[e ( _lcd_string (2 , :s 13C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 533: lcd_command (0x89) ;
-"533
+[; ;D_Clock.c: 255: lcd_string ("DATE:",5);
+"255
+[e ( _lcd_string (2 , :s 11C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 256: lcd_command (0x89) ;
+"256
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 534: bcd_val_date = decimal_to_bcd (decimal_val_date);
-"534
+[; ;D_Clock.c: 257: bcd_val_date = decimal_to_bcd (decimal_val_date);
+"257
 [e = _bcd_val_date ( _decimal_to_bcd (1 _decimal_val_date ]
-[; ;D_Clock.c: 535: bcd_to_ascii (bcd_val_date) ;
-"535
+[; ;D_Clock.c: 258: bcd_to_ascii (bcd_val_date) ;
+"258
 [e ( _bcd_to_ascii (1 _bcd_val_date ]
-[; ;D_Clock.c: 536: lcd_init ();
-"536
+[; ;D_Clock.c: 259: lcd_init ();
+"259
 [e ( _lcd_init ..  ]
-"537
+"260
 }
 [e :U 273 ]
-[; ;D_Clock.c: 537: }
-[; ;D_Clock.c: 538: if(PORTBbits.RB5 == 1)
-"538
+[; ;D_Clock.c: 260: }
+[; ;D_Clock.c: 261: if(PORTBbits.RB5 == 1)
+"261
 [e $ ! == -> . . _PORTBbits 0 5 `i -> 1 `i 278  ]
-[; ;D_Clock.c: 539: {
-"539
+[; ;D_Clock.c: 262: {
+"262
 {
-[; ;D_Clock.c: 540: while(PORTBbits.RB5 == 1 );
-"540
+[; ;D_Clock.c: 263: while(PORTBbits.RB5 == 1 );
+"263
 [e $U 279  ]
 [e :U 280 ]
 [e :U 279 ]
 [e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 280  ]
 [e :U 281 ]
-[; ;D_Clock.c: 541: decimal_val_date -- ;
-"541
+[; ;D_Clock.c: 264: decimal_val_date -- ;
+"264
 [e -- _decimal_val_date -> -> 1 `i `uc ]
-[; ;D_Clock.c: 542: if(decimal_val_date == 0)
-"542
+[; ;D_Clock.c: 265: if(decimal_val_date == 0)
+"265
 [e $ ! == -> _decimal_val_date `i -> 0 `i 282  ]
-[; ;D_Clock.c: 543: {
-"543
+[; ;D_Clock.c: 266: {
+"266
 {
-[; ;D_Clock.c: 544: decimal_val_date = 31 ;
-"544
+[; ;D_Clock.c: 267: decimal_val_date = 31 ;
+"267
 [e = _decimal_val_date -> -> 31 `i `uc ]
-"545
+"268
 }
 [e :U 282 ]
-[; ;D_Clock.c: 545: }
-[; ;D_Clock.c: 546: _delay((unsigned long)((100)*(20000000/4000.0)));
-"546
+[; ;D_Clock.c: 268: }
+[; ;D_Clock.c: 269: _delay((unsigned long)((100)*(20000000/4000.0)));
+"269
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 547: lcd_command (0x83);
-"547
+[; ;D_Clock.c: 270: lcd_command (0x83);
+"270
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 548: lcd_string ("DATE:",5);
-"548
-[e ( _lcd_string (2 , :s 14C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 549: lcd_command (0x89) ;
-"549
+[; ;D_Clock.c: 271: lcd_string ("DATE:",5);
+"271
+[e ( _lcd_string (2 , :s 12C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 272: lcd_command (0x89) ;
+"272
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 550: bcd_val_date = decimal_to_bcd (decimal_val_date);
-"550
+[; ;D_Clock.c: 273: bcd_val_date = decimal_to_bcd (decimal_val_date);
+"273
 [e = _bcd_val_date ( _decimal_to_bcd (1 _decimal_val_date ]
-[; ;D_Clock.c: 551: bcd_to_ascii (bcd_val_date) ;
-"551
+[; ;D_Clock.c: 274: bcd_to_ascii (bcd_val_date) ;
+"274
 [e ( _bcd_to_ascii (1 _bcd_val_date ]
-[; ;D_Clock.c: 552: lcd_init ();
-"552
+[; ;D_Clock.c: 275: lcd_init ();
+"275
 [e ( _lcd_init ..  ]
-"553
+"276
 }
 [e :U 278 ]
-"554
+"277
 }
 [e :U 272 ]
-[; ;D_Clock.c: 553: }
-[; ;D_Clock.c: 554: }
-[; ;D_Clock.c: 556: if (timing_flag == 5)
-"556
+[; ;D_Clock.c: 276: }
+[; ;D_Clock.c: 277: }
+[; ;D_Clock.c: 279: if (timing_flag == 5)
+"279
 [e $ ! == -> _timing_flag `i -> 5 `i 283  ]
-[; ;D_Clock.c: 557: {
-"557
+[; ;D_Clock.c: 280: {
+"280
 {
-[; ;D_Clock.c: 558: lcd_command(0x01);
-"558
+[; ;D_Clock.c: 281: lcd_command(0x01);
+"281
 [e ( _lcd_command (1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 559: lcd_command (0x83);
-"559
+[; ;D_Clock.c: 282: lcd_command (0x83);
+"282
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 560: lcd_string ("MON.:",5);
-"560
-[e ( _lcd_string (2 , :s 15C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 561: lcd_command (0x89) ;
-"561
+[; ;D_Clock.c: 283: lcd_string ("MON.:",5);
+"283
+[e ( _lcd_string (2 , :s 13C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 284: lcd_command (0x89) ;
+"284
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 562: bcd_to_ascii (bcd_val_month) ;
-"562
+[; ;D_Clock.c: 285: bcd_to_ascii (bcd_val_month) ;
+"285
 [e ( _bcd_to_ascii (1 _bcd_val_month ]
-[; ;D_Clock.c: 564: if(PORTBbits.RB4 == 1)
-"564
+[; ;D_Clock.c: 286: _delay((unsigned long)((100)*(20000000/4000.0)));
+"286
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 288: if(PORTBbits.RB4 == 1)
+"288
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 1 `i 284  ]
-[; ;D_Clock.c: 565: {
-"565
+[; ;D_Clock.c: 289: {
+"289
 {
-[; ;D_Clock.c: 566: while(PORTBbits.RB4 == 1 );
-"566
+[; ;D_Clock.c: 290: while(PORTBbits.RB4 == 1 );
+"290
 [e $U 285  ]
 [e :U 286 ]
 [e :U 285 ]
 [e $ == -> . . _PORTBbits 0 4 `i -> 1 `i 286  ]
 [e :U 287 ]
-[; ;D_Clock.c: 567: decimal_val_month ++ ;
-"567
+[; ;D_Clock.c: 291: decimal_val_month ++ ;
+"291
 [e ++ _decimal_val_month -> -> 1 `i `uc ]
-[; ;D_Clock.c: 568: if(decimal_val_month == 60)
-"568
+[; ;D_Clock.c: 292: if(decimal_val_month == 60)
+"292
 [e $ ! == -> _decimal_val_month `i -> 60 `i 288  ]
-[; ;D_Clock.c: 569: {
-"569
+[; ;D_Clock.c: 293: {
+"293
 {
-[; ;D_Clock.c: 570: decimal_val_month =0 ;
-"570
+[; ;D_Clock.c: 294: decimal_val_month =0 ;
+"294
 [e = _decimal_val_month -> -> 0 `i `uc ]
-"571
+"295
 }
 [e :U 288 ]
-[; ;D_Clock.c: 571: }
-[; ;D_Clock.c: 572: _delay((unsigned long)((100)*(20000000/4000.0)));
-"572
+[; ;D_Clock.c: 295: }
+[; ;D_Clock.c: 296: _delay((unsigned long)((100)*(20000000/4000.0)));
+"296
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 573: lcd_command (0x83);
-"573
+[; ;D_Clock.c: 297: lcd_command (0x83);
+"297
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 574: lcd_string ("SEC.:",5);
-"574
-[e ( _lcd_string (2 , :s 16C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 575: lcd_command (0x89) ;
-"575
+[; ;D_Clock.c: 298: lcd_string ("SEC.:",5);
+"298
+[e ( _lcd_string (2 , :s 14C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 299: lcd_command (0x89) ;
+"299
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 576: bcd_val_month = decimal_to_bcd (decimal_val_month);
-"576
+[; ;D_Clock.c: 300: bcd_val_month = decimal_to_bcd (decimal_val_month);
+"300
 [e = _bcd_val_month ( _decimal_to_bcd (1 _decimal_val_month ]
-[; ;D_Clock.c: 577: bcd_to_ascii (bcd_val_month) ;
-"577
+[; ;D_Clock.c: 301: bcd_to_ascii (bcd_val_month) ;
+"301
 [e ( _bcd_to_ascii (1 _bcd_val_month ]
-[; ;D_Clock.c: 578: lcd_init ();
-"578
+[; ;D_Clock.c: 302: lcd_init ();
+"302
 [e ( _lcd_init ..  ]
-"579
+"303
 }
 [e :U 284 ]
-[; ;D_Clock.c: 579: }
-[; ;D_Clock.c: 580: if(PORTBbits.RB5 == 1)
-"580
+[; ;D_Clock.c: 303: }
+[; ;D_Clock.c: 304: if(PORTBbits.RB5 == 1)
+"304
 [e $ ! == -> . . _PORTBbits 0 5 `i -> 1 `i 289  ]
-[; ;D_Clock.c: 581: {
-"581
+[; ;D_Clock.c: 305: {
+"305
 {
-[; ;D_Clock.c: 582: while(PORTBbits.RB5 == 1 );
-"582
+[; ;D_Clock.c: 306: while(PORTBbits.RB5 == 1 );
+"306
 [e $U 290  ]
 [e :U 291 ]
 [e :U 290 ]
 [e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 291  ]
 [e :U 292 ]
-[; ;D_Clock.c: 583: decimal_val_month -- ;
-"583
+[; ;D_Clock.c: 307: decimal_val_month -- ;
+"307
 [e -- _decimal_val_month -> -> 1 `i `uc ]
-[; ;D_Clock.c: 584: if(decimal_val_month == 0)
-"584
+[; ;D_Clock.c: 308: if(decimal_val_month == 0)
+"308
 [e $ ! == -> _decimal_val_month `i -> 0 `i 293  ]
-[; ;D_Clock.c: 585: {
-"585
+[; ;D_Clock.c: 309: {
+"309
 {
-[; ;D_Clock.c: 586: decimal_val_month = 59 ;
-"586
+[; ;D_Clock.c: 310: decimal_val_month = 59 ;
+"310
 [e = _decimal_val_month -> -> 59 `i `uc ]
-"587
+"311
 }
 [e :U 293 ]
-[; ;D_Clock.c: 587: }
-[; ;D_Clock.c: 588: _delay((unsigned long)((100)*(20000000/4000.0)));
-"588
+[; ;D_Clock.c: 311: }
+[; ;D_Clock.c: 312: _delay((unsigned long)((100)*(20000000/4000.0)));
+"312
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 589: lcd_command (0x83);
-"589
+[; ;D_Clock.c: 313: lcd_command (0x83);
+"313
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 590: lcd_string ("SEC.:",5);
-"590
-[e ( _lcd_string (2 , :s 17C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 591: lcd_command (0x89) ;
-"591
+[; ;D_Clock.c: 314: lcd_string ("SEC.:",5);
+"314
+[e ( _lcd_string (2 , :s 15C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 315: lcd_command (0x89) ;
+"315
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 592: bcd_val_month = decimal_to_bcd (decimal_val_month);
-"592
+[; ;D_Clock.c: 316: bcd_val_month = decimal_to_bcd (decimal_val_month);
+"316
 [e = _bcd_val_month ( _decimal_to_bcd (1 _decimal_val_month ]
-[; ;D_Clock.c: 593: bcd_to_ascii (bcd_val_month) ;
-"593
+[; ;D_Clock.c: 317: bcd_to_ascii (bcd_val_month) ;
+"317
 [e ( _bcd_to_ascii (1 _bcd_val_month ]
-[; ;D_Clock.c: 594: lcd_init ();
-"594
+[; ;D_Clock.c: 318: lcd_init ();
+"318
 [e ( _lcd_init ..  ]
-"595
+"319
 }
 [e :U 289 ]
-"596
+"320
 }
 [e :U 283 ]
-[; ;D_Clock.c: 595: }
-[; ;D_Clock.c: 596: }
-[; ;D_Clock.c: 598: if (timing_flag == 6)
-"598
+[; ;D_Clock.c: 319: }
+[; ;D_Clock.c: 320: }
+[; ;D_Clock.c: 322: if (timing_flag == 6)
+"322
 [e $ ! == -> _timing_flag `i -> 6 `i 294  ]
-[; ;D_Clock.c: 599: {
-"599
+[; ;D_Clock.c: 323: {
+"323
 {
-[; ;D_Clock.c: 600: lcd_command(0x01);
-"600
+[; ;D_Clock.c: 324: lcd_command(0x01);
+"324
 [e ( _lcd_command (1 -> -> 1 `i `uc ]
-[; ;D_Clock.c: 601: lcd_command (0x83);
-"601
+[; ;D_Clock.c: 325: lcd_command (0x83);
+"325
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 602: lcd_string ("yer.:",5);
-"602
-[e ( _lcd_string (2 , :s 18C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 603: lcd_command (0x89) ;
-"603
+[; ;D_Clock.c: 326: lcd_string ("yer.:",5);
+"326
+[e ( _lcd_string (2 , :s 16C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 327: lcd_command (0x89) ;
+"327
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 604: bcd_to_ascii (bcd_val_year) ;
-"604
+[; ;D_Clock.c: 328: bcd_to_ascii (bcd_val_year) ;
+"328
 [e ( _bcd_to_ascii (1 _bcd_val_year ]
-[; ;D_Clock.c: 606: if(PORTBbits.RB4 == 1)
-"606
+[; ;D_Clock.c: 329: _delay((unsigned long)((100)*(20000000/4000.0)));
+"329
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+[; ;D_Clock.c: 331: if(PORTBbits.RB4 == 1)
+"331
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 1 `i 295  ]
-[; ;D_Clock.c: 607: {
-"607
+[; ;D_Clock.c: 332: {
+"332
 {
-[; ;D_Clock.c: 608: while(PORTBbits.RB4 == 1 );
-"608
+[; ;D_Clock.c: 333: while(PORTBbits.RB4 == 1 );
+"333
 [e $U 296  ]
 [e :U 297 ]
 [e :U 296 ]
 [e $ == -> . . _PORTBbits 0 4 `i -> 1 `i 297  ]
 [e :U 298 ]
-[; ;D_Clock.c: 609: decimal_val_year ++ ;
-"609
+[; ;D_Clock.c: 334: decimal_val_year ++ ;
+"334
 [e ++ _decimal_val_year -> -> 1 `i `uc ]
-[; ;D_Clock.c: 610: if(decimal_val_year == 60)
-"610
+[; ;D_Clock.c: 335: if(decimal_val_year == 60)
+"335
 [e $ ! == -> _decimal_val_year `i -> 60 `i 299  ]
-[; ;D_Clock.c: 611: {
-"611
+[; ;D_Clock.c: 336: {
+"336
 {
-[; ;D_Clock.c: 612: decimal_val_year =0 ;
-"612
+[; ;D_Clock.c: 337: decimal_val_year =0 ;
+"337
 [e = _decimal_val_year -> -> 0 `i `uc ]
-"613
+"338
 }
 [e :U 299 ]
-[; ;D_Clock.c: 613: }
-[; ;D_Clock.c: 614: _delay((unsigned long)((100)*(20000000/4000.0)));
-"614
+[; ;D_Clock.c: 338: }
+[; ;D_Clock.c: 339: _delay((unsigned long)((100)*(20000000/4000.0)));
+"339
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 615: lcd_command (0x83);
-"615
+[; ;D_Clock.c: 340: lcd_command (0x83);
+"340
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 616: lcd_string ("yer.:",5);
-"616
-[e ( _lcd_string (2 , :s 19C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 617: lcd_command (0x89) ;
-"617
+[; ;D_Clock.c: 341: lcd_string ("yer.:",5);
+"341
+[e ( _lcd_string (2 , :s 17C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 342: lcd_command (0x89) ;
+"342
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 618: bcd_val_year = decimal_to_bcd (decimal_val_year);
-"618
+[; ;D_Clock.c: 343: bcd_val_year = decimal_to_bcd (decimal_val_year);
+"343
 [e = _bcd_val_year ( _decimal_to_bcd (1 _decimal_val_year ]
-[; ;D_Clock.c: 619: bcd_to_ascii (bcd_val_year) ;
-"619
+[; ;D_Clock.c: 344: bcd_to_ascii (bcd_val_year) ;
+"344
 [e ( _bcd_to_ascii (1 _bcd_val_year ]
-[; ;D_Clock.c: 620: lcd_init ();
-"620
+[; ;D_Clock.c: 345: lcd_init ();
+"345
 [e ( _lcd_init ..  ]
-"621
+"346
 }
 [e :U 295 ]
-[; ;D_Clock.c: 621: }
-[; ;D_Clock.c: 622: if(PORTBbits.RB5 == 1)
-"622
+[; ;D_Clock.c: 346: }
+[; ;D_Clock.c: 347: if(PORTBbits.RB5 == 1)
+"347
 [e $ ! == -> . . _PORTBbits 0 5 `i -> 1 `i 300  ]
-[; ;D_Clock.c: 623: {
-"623
+[; ;D_Clock.c: 348: {
+"348
 {
-[; ;D_Clock.c: 624: while(PORTBbits.RB5 == 1 );
-"624
+[; ;D_Clock.c: 349: while(PORTBbits.RB5 == 1 );
+"349
 [e $U 301  ]
 [e :U 302 ]
 [e :U 301 ]
 [e $ == -> . . _PORTBbits 0 5 `i -> 1 `i 302  ]
 [e :U 303 ]
-[; ;D_Clock.c: 625: decimal_val_year -- ;
-"625
+[; ;D_Clock.c: 350: decimal_val_year -- ;
+"350
 [e -- _decimal_val_year -> -> 1 `i `uc ]
-[; ;D_Clock.c: 626: if(decimal_val_year == 0)
-"626
+[; ;D_Clock.c: 351: if(decimal_val_year == 0)
+"351
 [e $ ! == -> _decimal_val_year `i -> 0 `i 304  ]
-[; ;D_Clock.c: 627: {
-"627
+[; ;D_Clock.c: 352: {
+"352
 {
-[; ;D_Clock.c: 628: decimal_val_year = 59 ;
-"628
+[; ;D_Clock.c: 353: decimal_val_year = 59 ;
+"353
 [e = _decimal_val_year -> -> 59 `i `uc ]
-"629
+"354
 }
 [e :U 304 ]
-[; ;D_Clock.c: 629: }
-[; ;D_Clock.c: 630: _delay((unsigned long)((100)*(20000000/4000.0)));
-"630
+[; ;D_Clock.c: 354: }
+[; ;D_Clock.c: 355: _delay((unsigned long)((100)*(20000000/4000.0)));
+"355
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 631: lcd_command (0x83);
-"631
+[; ;D_Clock.c: 356: lcd_command (0x83);
+"356
 [e ( _lcd_command (1 -> -> 131 `i `uc ]
-[; ;D_Clock.c: 632: lcd_string ("yer.:",5);
-"632
-[e ( _lcd_string (2 , :s 20C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 633: lcd_command (0x89) ;
-"633
+[; ;D_Clock.c: 357: lcd_string ("yer.:",5);
+"357
+[e ( _lcd_string (2 , :s 18C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 358: lcd_command (0x89) ;
+"358
 [e ( _lcd_command (1 -> -> 137 `i `uc ]
-[; ;D_Clock.c: 634: bcd_val_year = decimal_to_bcd (decimal_val_year);
-"634
+[; ;D_Clock.c: 359: bcd_val_year = decimal_to_bcd (decimal_val_year);
+"359
 [e = _bcd_val_year ( _decimal_to_bcd (1 _decimal_val_year ]
-[; ;D_Clock.c: 635: bcd_to_ascii (bcd_val_year) ;
-"635
+[; ;D_Clock.c: 360: bcd_to_ascii (bcd_val_year) ;
+"360
 [e ( _bcd_to_ascii (1 _bcd_val_year ]
-[; ;D_Clock.c: 636: lcd_init ();
-"636
+[; ;D_Clock.c: 361: lcd_init ();
+"361
 [e ( _lcd_init ..  ]
-"637
+"362
 }
 [e :U 300 ]
-"638
+"363
 }
 [e :U 294 ]
-"642
+"367
 }
 [e :U 236 ]
-"384
+"103
 [e $ == -> . . _PORTBbits 0 6 `i -> 0 `i 237  ]
 [e :U 238 ]
-[; ;D_Clock.c: 637: }
-[; ;D_Clock.c: 638: }
-[; ;D_Clock.c: 642: }
-[; ;D_Clock.c: 644: lcd_init ();
-"644
+[; ;D_Clock.c: 362: }
+[; ;D_Clock.c: 363: }
+[; ;D_Clock.c: 367: }
+[; ;D_Clock.c: 369: lcd_init ();
+"369
 [e ( _lcd_init ..  ]
-[; ;D_Clock.c: 645: lcd_command (0x80);
-"645
+[; ;D_Clock.c: 370: lcd_command (0x80);
+"370
 [e ( _lcd_command (1 -> -> 128 `i `uc ]
-[; ;D_Clock.c: 646: lcd_string ("CLOCK:",6);
-"646
-[e ( _lcd_string (2 , :s 21C -> -> 6 `i `uc ]
-[; ;D_Clock.c: 647: lcd_command (0xc0) ;
-"647
+[; ;D_Clock.c: 371: lcd_string ("CLOCK:",6);
+"371
+[e ( _lcd_string (2 , :s 19C -> -> 6 `i `uc ]
+[; ;D_Clock.c: 372: lcd_command (0xc0) ;
+"372
 [e ( _lcd_command (1 -> -> 192 `i `uc ]
-[; ;D_Clock.c: 648: lcd_string ("DATE:", 5) ;
-"648
-[e ( _lcd_string (2 , :s 22C -> -> 5 `i `uc ]
-[; ;D_Clock.c: 649: lcd_command (0xc7) ;
-"649
+[; ;D_Clock.c: 373: lcd_string ("DATE:", 5) ;
+"373
+[e ( _lcd_string (2 , :s 20C -> -> 5 `i `uc ]
+[; ;D_Clock.c: 374: lcd_command (0xc7) ;
+"374
 [e ( _lcd_command (1 -> -> 199 `i `uc ]
-[; ;D_Clock.c: 650: timing_flag = 0 ;
-"650
+[; ;D_Clock.c: 375: timing_flag = 0 ;
+"375
 [e = _timing_flag -> -> 0 `i `uc ]
-[; ;D_Clock.c: 651: _delay((unsigned long)((300)*(20000000/4000.0))) ;
-"651
+[; ;D_Clock.c: 376: _delay((unsigned long)((300)*(20000000/4000.0))) ;
+"376
 [e ( __delay (1 -> * -> -> 300 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-[; ;D_Clock.c: 652: DS1307_write (decimal_val_second, decimal_val_minute, decimal_val_hour,1, decimal_val_date, decimal_val_month, decimal_val_year);
-"652
+[; ;D_Clock.c: 377: DS1307_write (decimal_val_second, decimal_val_minute, decimal_val_hour,1, decimal_val_date, decimal_val_month, decimal_val_year);
+"377
 [e ( _DS1307_write (4 , , , , , , _decimal_val_second _decimal_val_minute _decimal_val_hour -> -> 1 `i `uc _decimal_val_date _decimal_val_month _decimal_val_year ]
-[; ;D_Clock.c: 653: }
-"653
+[; ;D_Clock.c: 378: }
+"378
 [e :UE 235 ]
 }
 [v $root$_external `(v ~T0 @X0 0 e ]
-[v F876 `(v ~T0 @X0 1 tf ]
-"654
-[v _external `IF876 ~T0 @X0 1 e ]
-"655
+[v F910 `(v ~T0 @X0 1 tf ]
+"379
+[v _external `IF910 ~T0 @X0 1 e ]
+"380
 {
-[; ;D_Clock.c: 654: void interrupt external ()
-[; ;D_Clock.c: 655: {
+[; ;D_Clock.c: 379: void interrupt external ()
+[; ;D_Clock.c: 380: {
 [e :U _external ]
 [f ]
-[; ;D_Clock.c: 657: if (INTCONbits.INTF == 1) {
-"657
+[; ;D_Clock.c: 382: if (INTCONbits.INTF == 1) {
+"382
 [e $ ! == -> . . _INTCONbits 0 1 `i -> 1 `i 306  ]
 {
-[; ;D_Clock.c: 658: INTCONbits.INTF = 0;
-"658
+[; ;D_Clock.c: 383: INTCONbits.INTF = 0;
+"383
 [e = . . _INTCONbits 0 1 -> -> 0 `i `uc ]
-[; ;D_Clock.c: 659: lcd_init();
-"659
+[; ;D_Clock.c: 384: lcd_init();
+"384
 [e ( _lcd_init ..  ]
-[; ;D_Clock.c: 660: timing_flag = 1 + timing_flag ;
-"660
+[; ;D_Clock.c: 385: timing_flag = 1 + timing_flag ;
+"385
 [e = _timing_flag -> + -> 1 `i -> _timing_flag `i `uc ]
-[; ;D_Clock.c: 661: if (timing_flag == 7 ) {
-"661
+[; ;D_Clock.c: 386: if (timing_flag == 7 ) {
+"386
 [e $ ! == -> _timing_flag `i -> 7 `i 307  ]
 {
-[; ;D_Clock.c: 662: timing_flag = 1;
-"662
+[; ;D_Clock.c: 387: timing_flag = 1;
+"387
 [e = _timing_flag -> -> 1 `i `uc ]
-"663
+"388
 }
 [e :U 307 ]
-"664
+"389
 }
 [e :U 306 ]
-[; ;D_Clock.c: 663: }
-[; ;D_Clock.c: 664: }
-[; ;D_Clock.c: 665: }
-"665
+[; ;D_Clock.c: 388: }
+[; ;D_Clock.c: 389: }
+[; ;D_Clock.c: 390: }
+"390
 [e :UE 305 ]
 }
-[a 9C 104 111 117 114 58 0 ]
+[a 7C 104 111 117 114 58 0 ]
 [a 1C 67 76 79 67 75 58 0 ]
-[a 21C 67 76 79 67 75 58 0 ]
+[a 19C 67 76 79 67 75 58 0 ]
 [a 2C 68 65 84 69 58 0 ]
+[a 10C 68 65 84 69 58 0 ]
+[a 11C 68 65 84 69 58 0 ]
 [a 12C 68 65 84 69 58 0 ]
-[a 13C 68 65 84 69 58 0 ]
-[a 14C 68 65 84 69 58 0 ]
-[a 22C 68 65 84 69 58 0 ]
+[a 20C 68 65 84 69 58 0 ]
+[a 16C 121 101 114 46 58 0 ]
+[a 17C 121 101 114 46 58 0 ]
 [a 18C 121 101 114 46 58 0 ]
-[a 19C 121 101 114 46 58 0 ]
-[a 20C 121 101 114 46 58 0 ]
-[a 15C 77 79 78 46 58 0 ]
+[a 13C 77 79 78 46 58 0 ]
+[a 4C 77 73 78 46 58 0 ]
+[a 5C 77 73 78 46 58 0 ]
 [a 6C 77 73 78 46 58 0 ]
-[a 7C 77 73 78 46 58 0 ]
-[a 8C 77 73 78 46 58 0 ]
 [a 3C 83 69 67 46 58 0 ]
-[a 4C 83 69 67 46 58 0 ]
-[a 5C 83 69 67 46 58 0 ]
-[a 10C 83 69 67 46 58 0 ]
-[a 11C 83 69 67 46 58 0 ]
-[a 16C 83 69 67 46 58 0 ]
-[a 17C 83 69 67 46 58 0 ]
+[a 8C 83 69 67 46 58 0 ]
+[a 9C 83 69 67 46 58 0 ]
+[a 14C 83 69 67 46 58 0 ]
+[a 15C 83 69 67 46 58 0 ]
