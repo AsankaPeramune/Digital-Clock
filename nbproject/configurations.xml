@@ -5,9 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>LCD.h</itemPath>
-      <itemPath>Conversion.h</itemPath>
       <itemPath>DS1307_read.h</itemPath>
       <itemPath>DS1307_write.h</itemPath>
+      <itemPath>Conversion.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
